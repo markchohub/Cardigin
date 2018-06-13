@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html class="nojs html css_verticalspacer" lang="en-US">
+ <head>
+
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+  <meta name="generator" content="2018.1.0.386"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <script type="text/javascript">
+   // Update the 'nojs'/'js' class on the html node
+document.documentElement.className = document.documentElement.className.replace(/\bnojs\b/g, 'js');
+
+// Check that all required assets are uploaded and up-to-date
+if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required":["museutils.js", "museconfig.js", "webpro.js", "musewpdisclosure.js", "jquery.watch.js", "jquery.musemenu.js", "jquery.scrolleffects.js", "jquery.museresponsive.js", "require.js", "index.css"], "outOfDate":[]};
+</script>
+
+  <title>Organizations</title>
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="css/site_global.css?crc=444006867"/>
+  <link rel="stylesheet" type="text/css" href="css/master_a-master.css?crc=318122519"/>
+  <link rel="stylesheet" type="text/css" href="css/index.css?crc=4049105582" id="pagesheet"/>
+    <link rel="stylesheet" href="css/Gradient.css" type="text/css"/>
+  <!-- IE-only CSS -->
+  <!--[if lt IE 9]>
+  <link rel="stylesheet" type="text/css" href="css/nomq_preview_master_a-master.css?crc=388864593"/>
+  <link rel="stylesheet" type="text/css" href="css/nomq_index.css?crc=3849911241" id="nomq_pagesheet"/>
+  <![endif]-->
+  <!-- JS includes -->
+  <!--[if lt IE 9]>
+  <script src="scripts/html5shiv.js?crc=4241844378" type="text/javascript"></script>
+  <![endif]-->
+    <!--HTML Widget code-->
+
+
+
+
+    <script>
+    !function(e,t){"function"==typeof define&&define.amd?define("ev-emitter/ev-emitter",t):"object"==typeof module&&module.exports?module.exports=t():e.EvEmitter=t()}("undefined"!=typeof window?window:this,function(){function e(){}var t=e.prototype;return t.on=function(e,t){if(e&&t){var i=this._events=this._events||{},n=i[e]=i[e]||[];return-1==n.indexOf(t)&&n.push(t),this}},t.once=function(e,t){if(e&&t){this.on(e,t);var i=this._onceEvents=this._onceEvents||{},n=i[e]=i[e]||{};return n[t]=!0,this}},t.off=function(e,t){var i=this._events&&this._events[e];if(i&&i.length){var n=i.indexOf(t);return-1!=n&&i.splice(n,1),this}},t.emitEvent=function(e,t){var i=this._events&&this._events[e];if(i&&i.length){var n=0,o=i[n];t=t||[];for(var r=this._onceEvents&&this._onceEvents[e];o;){var s=r&&r[o];s&&(this.off(e,o),delete r[o]),o.apply(this,t),n+=s?0:1,o=i[n]}return this}},t.allOff=t.removeAllListeners=function(){delete this._events,delete this._onceEvents},e}),function(e,t){"use strict";"function"==typeof define&&define.amd?define(["ev-emitter/ev-emitter"],function(i){return t(e,i)}):"object"==typeof module&&module.exports?module.exports=t(e,require("ev-emitter")):e.imagesLoaded=t(e,e.EvEmitter)}("undefined"!=typeof window?window:this,function(e,t){function i(e,t){for(var i in t)e[i]=t[i];return e}function n(e){var t=[];if(Array.isArray(e))t=e;else if("number"==typeof e.length)for(var i=0;i<e.length;i++)t.push(e[i]);else t.push(e);return t}function o(e,t,r){return this instanceof o?("string"==typeof e&&(e=document.querySelectorAll(e)),this.elements=n(e),this.options=i({},this.options),"function"==typeof t?r=t:i(this.options,t),r&&this.on("always",r),this.getImages(),h&&(this.jqDeferred=new h.Deferred),void setTimeout(function(){this.check()}.bind(this))):new o(e,t,r)}function r(e){this.img=e}function s(e,t){this.url=e,this.element=t,this.img=new Image}var h=e.jQuery,a=e.console;o.prototype=Object.create(t.prototype),o.prototype.options={},o.prototype.getImages=function(){this.images=[],this.elements.forEach(this.addElementImages,this)},o.prototype.addElementImages=function(e){"IMG"==e.nodeName&&this.addImage(e),this.options.background===!0&&this.addElementBackgroundImages(e);var t=e.nodeType;if(t&&d[t]){for(var i=e.querySelectorAll("img"),n=0;n<i.length;n++){var o=i[n];this.addImage(o)}if("string"==typeof this.options.background){var r=e.querySelectorAll(this.options.background);for(n=0;n<r.length;n++){var s=r[n];this.addElementBackgroundImages(s)}}}};var d={1:!0,9:!0,11:!0};return o.prototype.addElementBackgroundImages=function(e){var t=getComputedStyle(e);if(t)for(var i=/url\((['"])?(.*?)\1\)/gi,n=i.exec(t.backgroundImage);null!==n;){var o=n&&n[2];o&&this.addBackground(o,e),n=i.exec(t.backgroundImage)}},o.prototype.addImage=function(e){var t=new r(e);this.images.push(t)},o.prototype.addBackground=function(e,t){var i=new s(e,t);this.images.push(i)},o.prototype.check=function(){function e(e,i,n){setTimeout(function(){t.progress(e,i,n)})}var t=this;return this.progressedCount=0,this.hasAnyBroken=!1,this.images.length?void this.images.forEach(function(t){t.once("progress",e),t.check()}):void this.complete()},o.prototype.progress=function(e,t,i){this.progressedCount++,this.hasAnyBroken=this.hasAnyBroken||!e.isLoaded,this.emitEvent("progress",[this,e,t]),this.jqDeferred&&this.jqDeferred.notify&&this.jqDeferred.notify(this,e),this.progressedCount==this.images.length&&this.complete(),this.options.debug&&a&&a.log("progress: "+i,e,t)},o.prototype.complete=function(){var e=this.hasAnyBroken?"fail":"done";if(this.isComplete=!0,this.emitEvent(e,[this]),this.emitEvent("always",[this]),this.jqDeferred){var t=this.hasAnyBroken?"reject":"resolve";this.jqDeferred[t](this)}},r.prototype=Object.create(t.prototype),r.prototype.check=function(){var e=this.getIsImageComplete();return e?void this.confirm(0!==this.img.naturalWidth,"naturalWidth"):(this.proxyImage=new Image,this.proxyImage.addEventListener("load",this),this.proxyImage.addEventListener("error",this),this.img.addEventListener("load",this),this.img.addEventListener("error",this),void(this.proxyImage.src=this.img.src))},r.prototype.getIsImageComplete=function(){return this.img.complete&&void 0!==this.img.naturalWidth},r.prototype.confirm=function(e,t){this.isLoaded=e,this.emitEvent("progress",[this,this.img,t])},r.prototype.handleEvent=function(e){var t="on"+e.type;this[t]&&this[t](e)},r.prototype.onload=function(){this.confirm(!0,"onload"),this.unbindEvents()},r.prototype.onerror=function(){this.confirm(!1,"onerror"),this.unbindEvents()},r.prototype.unbindEvents=function(){this.proxyImage.removeEventListener("load",this),this.proxyImage.removeEventListener("error",this),this.img.removeEventListener("load",this),this.img.removeEventListener("error",this)},s.prototype=Object.create(r.prototype),s.prototype.check=function(){this.img.addEventListener("load",this),this.img.addEventListener("error",this),this.img.src=this.url;var e=this.getIsImageComplete();e&&(this.confirm(0!==this.img.naturalWidth,"naturalWidth"),this.unbindEvents())},s.prototype.unbindEvents=function(){this.img.removeEventListener("load",this),this.img.removeEventListener("error",this)},s.prototype.confirm=function(e,t){this.isLoaded=e,this.emitEvent("progress",[this,this.element,t])},o.makeJQueryPlugin=function(t){t=t||e.jQuery,t&&(h=t,h.fn.imagesLoaded=function(e,t){var i=new o(this,e,t);return i.jqDeferred.promise(h(this))})},o.makeJQueryPlugin(),o});
+    </script>
+
+        <script>
+        !function(a){if("object"==typeof exports&&"undefined"!=typeof module)module.exports=a();else if("function"==typeof define&&define.amd)define([],a);else{var b;b="undefined"!=typeof window?window:"undefined"!=typeof global?global:"undefined"!=typeof self?self:this,b.ProgressBar=a()}}(function(){var a;return function b(a,c,d){function e(g,h){if(!c[g]){if(!a[g]){var i="function"==typeof require&&require;if(!h&&i)return i(g,!0);if(f)return f(g,!0);var j=new Error("Cannot find module '"+g+"'");throw j.code="MODULE_NOT_FOUND",j}var k=c[g]={exports:{}};a[g][0].call(k.exports,function(b){var c=a[g][1][b];return e(c?c:b)},k,k.exports,b,a,c,d)}return c[g].exports}for(var f="function"==typeof require&&require,g=0;g<d.length;g++)e(d[g]);return e}({1:[function(b,c,d){(function(){var b=this||Function("return this")(),e=function(){"use strict";function e(){}function f(a,b){var c;for(c in a)Object.hasOwnProperty.call(a,c)&&b(c)}function g(a,b){return f(b,function(c){a[c]=b[c]}),a}function h(a,b){f(b,function(c){"undefined"==typeof a[c]&&(a[c]=b[c])})}function i(a,b,c,d,e,f,g){var h,i,k,l=f>a?0:(a-f)/e;for(h in b)b.hasOwnProperty(h)&&(i=g[h],k="function"==typeof i?i:o[i],b[h]=j(c[h],d[h],k,l));return b}function j(a,b,c,d){return a+(b-a)*c(d)}function k(a,b){var c=n.prototype.filter,d=a._filterArgs;f(c,function(e){"undefined"!=typeof c[e][b]&&c[e][b].apply(a,d)})}function l(a,b,c,d,e,f,g,h,j,l,m){v=b+c+d,w=Math.min(m||u(),v),x=w>=v,y=d-(v-w),a.isPlaying()&&(x?(j(g,a._attachment,y),a.stop(!0)):(a._scheduleId=l(a._timeoutHandler,s),k(a,"beforeTween"),b+c>w?i(1,e,f,g,1,1,h):i(w,e,f,g,d,b+c,h),k(a,"afterTween"),j(e,a._attachment,y)))}function m(a,b){var c={},d=typeof b;return"string"===d||"function"===d?f(a,function(a){c[a]=b}):f(a,function(a){c[a]||(c[a]=b[a]||q)}),c}function n(a,b){this._currentState=a||{},this._configured=!1,this._scheduleFunction=p,"undefined"!=typeof b&&this.setConfig(b)}var o,p,q="linear",r=500,s=1e3/60,t=Date.now?Date.now:function(){return+new Date},u="undefined"!=typeof SHIFTY_DEBUG_NOW?SHIFTY_DEBUG_NOW:t;p="undefined"!=typeof window?window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||window.mozCancelRequestAnimationFrame&&window.mozRequestAnimationFrame||setTimeout:setTimeout;var v,w,x,y;return n.prototype.tween=function(a){return this._isTweening?this:(void 0===a&&this._configured||this.setConfig(a),this._timestamp=u(),this._start(this.get(),this._attachment),this.resume())},n.prototype.setConfig=function(a){a=a||{},this._configured=!0,this._attachment=a.attachment,this._pausedAtTime=null,this._scheduleId=null,this._delay=a.delay||0,this._start=a.start||e,this._step=a.step||e,this._finish=a.finish||e,this._duration=a.duration||r,this._currentState=g({},a.from)||this.get(),this._originalState=this.get(),this._targetState=g({},a.to)||this.get();var b=this;this._timeoutHandler=function(){l(b,b._timestamp,b._delay,b._duration,b._currentState,b._originalState,b._targetState,b._easing,b._step,b._scheduleFunction)};var c=this._currentState,d=this._targetState;return h(d,c),this._easing=m(c,a.easing||q),this._filterArgs=[c,this._originalState,d,this._easing],k(this,"tweenCreated"),this},n.prototype.get=function(){return g({},this._currentState)},n.prototype.set=function(a){this._currentState=a},n.prototype.pause=function(){return this._pausedAtTime=u(),this._isPaused=!0,this},n.prototype.resume=function(){return this._isPaused&&(this._timestamp+=u()-this._pausedAtTime),this._isPaused=!1,this._isTweening=!0,this._timeoutHandler(),this},n.prototype.seek=function(a){a=Math.max(a,0);var b=u();return this._timestamp+a===0?this:(this._timestamp=b-a,this.isPlaying()||(this._isTweening=!0,this._isPaused=!1,l(this,this._timestamp,this._delay,this._duration,this._currentState,this._originalState,this._targetState,this._easing,this._step,this._scheduleFunction,b),this.pause()),this)},n.prototype.stop=function(a){return this._isTweening=!1,this._isPaused=!1,this._timeoutHandler=e,(b.cancelAnimationFrame||b.webkitCancelAnimationFrame||b.oCancelAnimationFrame||b.msCancelAnimationFrame||b.mozCancelRequestAnimationFrame||b.clearTimeout)(this._scheduleId),a&&(k(this,"beforeTween"),i(1,this._currentState,this._originalState,this._targetState,1,0,this._easing),k(this,"afterTween"),k(this,"afterTweenEnd"),this._finish.call(this,this._currentState,this._attachment)),this},n.prototype.isPlaying=function(){return this._isTweening&&!this._isPaused},n.prototype.setScheduleFunction=function(a){this._scheduleFunction=a},n.prototype.dispose=function(){var a;for(a in this)this.hasOwnProperty(a)&&delete this[a]},n.prototype.filter={},n.prototype.formula={linear:function(a){return a}},o=n.prototype.formula,g(n,{now:u,each:f,tweenProps:i,tweenProp:j,applyFilter:k,shallowCopy:g,defaults:h,composeEasingObject:m}),"function"==typeof SHIFTY_DEBUG_NOW&&(b.timeoutHandler=l),"object"==typeof d?c.exports=n:"function"==typeof a&&a.amd?a(function(){return n}):"undefined"==typeof b.Tweenable&&(b.Tweenable=n),n}();!function(){e.shallowCopy(e.prototype.formula,{easeInQuad:function(a){return Math.pow(a,2)},easeOutQuad:function(a){return-(Math.pow(a-1,2)-1)},easeInOutQuad:function(a){return(a/=.5)<1?.5*Math.pow(a,2):-.5*((a-=2)*a-2)},easeInCubic:function(a){return Math.pow(a,3)},easeOutCubic:function(a){return Math.pow(a-1,3)+1},easeInOutCubic:function(a){return(a/=.5)<1?.5*Math.pow(a,3):.5*(Math.pow(a-2,3)+2)},easeInQuart:function(a){return Math.pow(a,4)},easeOutQuart:function(a){return-(Math.pow(a-1,4)-1)},easeInOutQuart:function(a){return(a/=.5)<1?.5*Math.pow(a,4):-.5*((a-=2)*Math.pow(a,3)-2)},easeInQuint:function(a){return Math.pow(a,5)},easeOutQuint:function(a){return Math.pow(a-1,5)+1},easeInOutQuint:function(a){return(a/=.5)<1?.5*Math.pow(a,5):.5*(Math.pow(a-2,5)+2)},easeInSine:function(a){return-Math.cos(a*(Math.PI/2))+1},easeOutSine:function(a){return Math.sin(a*(Math.PI/2))},easeInOutSine:function(a){return-.5*(Math.cos(Math.PI*a)-1)},easeInExpo:function(a){return 0===a?0:Math.pow(2,10*(a-1))},easeOutExpo:function(a){return 1===a?1:-Math.pow(2,-10*a)+1},easeInOutExpo:function(a){return 0===a?0:1===a?1:(a/=.5)<1?.5*Math.pow(2,10*(a-1)):.5*(-Math.pow(2,-10*--a)+2)},easeInCirc:function(a){return-(Math.sqrt(1-a*a)-1)},easeOutCirc:function(a){return Math.sqrt(1-Math.pow(a-1,2))},easeInOutCirc:function(a){return(a/=.5)<1?-.5*(Math.sqrt(1-a*a)-1):.5*(Math.sqrt(1-(a-=2)*a)+1)},easeOutBounce:function(a){return 1/2.75>a?7.5625*a*a:2/2.75>a?7.5625*(a-=1.5/2.75)*a+.75:2.5/2.75>a?7.5625*(a-=2.25/2.75)*a+.9375:7.5625*(a-=2.625/2.75)*a+.984375},easeInBack:function(a){var b=1.70158;return a*a*((b+1)*a-b)},easeOutBack:function(a){var b=1.70158;return(a-=1)*a*((b+1)*a+b)+1},easeInOutBack:function(a){var b=1.70158;return(a/=.5)<1?.5*(a*a*(((b*=1.525)+1)*a-b)):.5*((a-=2)*a*(((b*=1.525)+1)*a+b)+2)},elastic:function(a){return-1*Math.pow(4,-8*a)*Math.sin((6*a-1)*(2*Math.PI)/2)+1},swingFromTo:function(a){var b=1.70158;return(a/=.5)<1?.5*(a*a*(((b*=1.525)+1)*a-b)):.5*((a-=2)*a*(((b*=1.525)+1)*a+b)+2)},swingFrom:function(a){var b=1.70158;return a*a*((b+1)*a-b)},swingTo:function(a){var b=1.70158;return(a-=1)*a*((b+1)*a+b)+1},bounce:function(a){return 1/2.75>a?7.5625*a*a:2/2.75>a?7.5625*(a-=1.5/2.75)*a+.75:2.5/2.75>a?7.5625*(a-=2.25/2.75)*a+.9375:7.5625*(a-=2.625/2.75)*a+.984375},bouncePast:function(a){return 1/2.75>a?7.5625*a*a:2/2.75>a?2-(7.5625*(a-=1.5/2.75)*a+.75):2.5/2.75>a?2-(7.5625*(a-=2.25/2.75)*a+.9375):2-(7.5625*(a-=2.625/2.75)*a+.984375)},easeFromTo:function(a){return(a/=.5)<1?.5*Math.pow(a,4):-.5*((a-=2)*Math.pow(a,3)-2)},easeFrom:function(a){return Math.pow(a,4)},easeTo:function(a){return Math.pow(a,.25)}})}(),function(){function a(a,b,c,d,e,f){function g(a){return((n*a+o)*a+p)*a}function h(a){return((q*a+r)*a+s)*a}function i(a){return(3*n*a+2*o)*a+p}function j(a){return 1/(200*a)}function k(a,b){return h(m(a,b))}function l(a){return a>=0?a:0-a}function m(a,b){var c,d,e,f,h,j;for(e=a,j=0;8>j;j++){if(f=g(e)-a,l(f)<b)return e;if(h=i(e),l(h)<1e-6)break;e-=f/h}if(c=0,d=1,e=a,c>e)return c;if(e>d)return d;for(;d>c;){if(f=g(e),l(f-a)<b)return e;a>f?c=e:d=e,e=.5*(d-c)+c}return e}var n=0,o=0,p=0,q=0,r=0,s=0;return p=3*b,o=3*(d-b)-p,n=1-p-o,s=3*c,r=3*(e-c)-s,q=1-s-r,k(a,j(f))}function b(b,c,d,e){return function(f){return a(f,b,c,d,e,1)}}e.setBezierFunction=function(a,c,d,f,g){var h=b(c,d,f,g);return h.displayName=a,h.x1=c,h.y1=d,h.x2=f,h.y2=g,e.prototype.formula[a]=h},e.unsetBezierFunction=function(a){delete e.prototype.formula[a]}}(),function(){function a(a,b,c,d,f,g){return e.tweenProps(d,b,a,c,1,g,f)}var b=new e;b._filterArgs=[],e.interpolate=function(c,d,f,g,h){var i=e.shallowCopy({},c),j=h||0,k=e.composeEasingObject(c,g||"linear");b.set({});var l=b._filterArgs;l.length=0,l[0]=i,l[1]=c,l[2]=d,l[3]=k,e.applyFilter(b,"tweenCreated"),e.applyFilter(b,"beforeTween");var m=a(c,i,d,f,k,j);return e.applyFilter(b,"afterTween"),m}}(),function(a){function b(a,b){var c,d=[],e=a.length;for(c=0;e>c;c++)d.push("_"+b+"_"+c);return d}function c(a){var b=a.match(v);return b?(1===b.length||a[0].match(u))&&b.unshift(""):b=["",""],b.join(A)}function d(b){a.each(b,function(a){var c=b[a];"string"==typeof c&&c.match(z)&&(b[a]=e(c))})}function e(a){return i(z,a,f)}function f(a){var b=g(a);return"rgb("+b[0]+","+b[1]+","+b[2]+")"}function g(a){return a=a.replace(/#/,""),3===a.length&&(a=a.split(""),a=a[0]+a[0]+a[1]+a[1]+a[2]+a[2]),B[0]=h(a.substr(0,2)),B[1]=h(a.substr(2,2)),B[2]=h(a.substr(4,2)),B}function h(a){return parseInt(a,16)}function i(a,b,c){var d=b.match(a),e=b.replace(a,A);if(d)for(var f,g=d.length,h=0;g>h;h++)f=d.shift(),e=e.replace(A,c(f));return e}function j(a){return i(x,a,k)}function k(a){for(var b=a.match(w),c=b.length,d=a.match(y)[0],e=0;c>e;e++)d+=parseInt(b[e],10)+",";return d=d.slice(0,-1)+")"}function l(d){var e={};return a.each(d,function(a){var f=d[a];if("string"==typeof f){var g=r(f);e[a]={formatString:c(f),chunkNames:b(g,a)}}}),e}function m(b,c){a.each(c,function(a){for(var d=b[a],e=r(d),f=e.length,g=0;f>g;g++)b[c[a].chunkNames[g]]=+e[g];delete b[a]})}function n(b,c){a.each(c,function(a){var d=b[a],e=o(b,c[a].chunkNames),f=p(e,c[a].chunkNames);d=q(c[a].formatString,f),b[a]=j(d)})}function o(a,b){for(var c,d={},e=b.length,f=0;e>f;f++)c=b[f],d[c]=a[c],delete a[c];return d}function p(a,b){C.length=0;for(var c=b.length,d=0;c>d;d++)C.push(a[b[d]]);return C}function q(a,b){for(var c=a,d=b.length,e=0;d>e;e++)c=c.replace(A,+b[e].toFixed(4));return c}function r(a){return a.match(w)}function s(b,c){a.each(c,function(a){var d,e=c[a],f=e.chunkNames,g=f.length,h=b[a];if("string"==typeof h){var i=h.split(" "),j=i[i.length-1];for(d=0;g>d;d++)b[f[d]]=i[d]||j}else for(d=0;g>d;d++)b[f[d]]=h;delete b[a]})}function t(b,c){a.each(c,function(a){var d=c[a],e=d.chunkNames,f=e.length,g=b[e[0]],h=typeof g;if("string"===h){for(var i="",j=0;f>j;j++)i+=" "+b[e[j]],delete b[e[j]];b[a]=i.substr(1)}else b[a]=g})}var u=/(\d|\-|\.)/,v=/([^\-0-9\.]+)/g,w=/[0-9.\-]+/g,x=new RegExp("rgb\\("+w.source+/,\s*/.source+w.source+/,\s*/.source+w.source+"\\)","g"),y=/^.*\(/,z=/#([0-9]|[a-f]){3,6}/gi,A="VAL",B=[],C=[];a.prototype.filter.token={tweenCreated:function(a,b,c,e){d(a),d(b),d(c),this._tokenData=l(a)},beforeTween:function(a,b,c,d){s(d,this._tokenData),m(a,this._tokenData),m(b,this._tokenData),m(c,this._tokenData)},afterTween:function(a,b,c,d){n(a,this._tokenData),n(b,this._tokenData),n(c,this._tokenData),t(d,this._tokenData)}}}(e)}).call(null)},{}],2:[function(a,b,c){var d=a("./shape"),e=a("./utils"),f=function(a,b){this._pathTemplate="M 50,50 m 0,-{radius} a {radius},{radius} 0 1 1 0,{2radius} a {radius},{radius} 0 1 1 0,-{2radius}",this.containerAspectRatio=1,d.apply(this,arguments)};f.prototype=new d,f.prototype.constructor=f,f.prototype._pathString=function(a){var b=a.strokeWidth;a.trailWidth&&a.trailWidth>a.strokeWidth&&(b=a.trailWidth);var c=50-b/2;return e.render(this._pathTemplate,{radius:c,"2radius":2*c})},f.prototype._trailString=function(a){return this._pathString(a)},b.exports=f},{"./shape":7,"./utils":8}],3:[function(a,b,c){var d=a("./shape"),e=a("./utils"),f=function(a,b){this._pathTemplate="M 0,{center} L 100,{center}",d.apply(this,arguments)};f.prototype=new d,f.prototype.constructor=f,f.prototype._initializeSvg=function(a,b){a.setAttribute("viewBox","0 0 100 "+b.strokeWidth),a.setAttribute("preserveAspectRatio","none")},f.prototype._pathString=function(a){return e.render(this._pathTemplate,{center:a.strokeWidth/2})},f.prototype._trailString=function(a){return this._pathString(a)},b.exports=f},{"./shape":7,"./utils":8}],4:[function(a,b,c){b.exports={Line:a("./line"),Circle:a("./circle"),SemiCircle:a("./semicircle"),Path:a("./path"),Shape:a("./shape"),utils:a("./utils")}},{"./circle":2,"./line":3,"./path":5,"./semicircle":6,"./shape":7,"./utils":8}],5:[function(a,b,c){var d=a("shifty"),e=a("./utils"),f={easeIn:"easeInCubic",easeOut:"easeOutCubic",easeInOut:"easeInOutCubic"},g=function h(a,b){if(!(this instanceof h))throw new Error("Constructor was called without new keyword");b=e.extend({duration:800,easing:"linear",from:{},to:{},step:function(){}},b);var c;c=e.isString(a)?document.querySelector(a):a,this.path=c,this._opts=b,this._tweenable=null;var d=this.path.getTotalLength();this.path.style.strokeDasharray=d+" "+d,this.set(0)};g.prototype.value=function(){var a=this._getComputedDashOffset(),b=this.path.getTotalLength(),c=1-a/b;return parseFloat(c.toFixed(6),10)},g.prototype.set=function(a){this.stop(),this.path.style.strokeDashoffset=this._progressToOffset(a);var b=this._opts.step;if(e.isFunction(b)){var c=this._easing(this._opts.easing),d=this._calculateTo(a,c),f=this._opts.shape||this;b(d,f,this._opts.attachment)}},g.prototype.stop=function(){this._stopTween(),this.path.style.strokeDashoffset=this._getComputedDashOffset()},g.prototype.animate=function(a,b,c){b=b||{},e.isFunction(b)&&(c=b,b={});var f=e.extend({},b),g=e.extend({},this._opts);b=e.extend(g,b);var h=this._easing(b.easing),i=this._resolveFromAndTo(a,h,f);this.stop(),this.path.getBoundingClientRect();var j=this._getComputedDashOffset(),k=this._progressToOffset(a),l=this;this._tweenable=new d,this._tweenable.tween({from:e.extend({offset:j},i.from),to:e.extend({offset:k},i.to),duration:b.duration,easing:h,step:function(a){l.path.style.strokeDashoffset=a.offset;var c=b.shape||l;b.step(a,c,b.attachment)},finish:function(a){e.isFunction(c)&&c()}})},g.prototype._getComputedDashOffset=function(){var a=window.getComputedStyle(this.path,null);return parseFloat(a.getPropertyValue("stroke-dashoffset"),10)},g.prototype._progressToOffset=function(a){var b=this.path.getTotalLength();return b-a*b},g.prototype._resolveFromAndTo=function(a,b,c){return c.from&&c.to?{from:c.from,to:c.to}:{from:this._calculateFrom(b),to:this._calculateTo(a,b)}},g.prototype._calculateFrom=function(a){return d.interpolate(this._opts.from,this._opts.to,this.value(),a)},g.prototype._calculateTo=function(a,b){return d.interpolate(this._opts.from,this._opts.to,a,b)},g.prototype._stopTween=function(){null!==this._tweenable&&(this._tweenable.stop(),this._tweenable=null)},g.prototype._easing=function(a){return f.hasOwnProperty(a)?f[a]:a},b.exports=g},{"./utils":8,shifty:1}],6:[function(a,b,c){var d=a("./shape"),e=a("./circle"),f=a("./utils"),g=function(a,b){this._pathTemplate="M 50,50 m -{radius},0 a {radius},{radius} 0 1 1 {2radius},0",this.containerAspectRatio=2,d.apply(this,arguments)};g.prototype=new d,g.prototype.constructor=g,g.prototype._initializeSvg=function(a,b){a.setAttribute("viewBox","0 0 100 50")},g.prototype._initializeTextContainer=function(a,b,c){a.text.style&&(c.style.top="auto",c.style.bottom="0",a.text.alignToBottom?f.setStyle(c,"transform","translate(-50%, 0)"):f.setStyle(c,"transform","translate(-50%, 50%)"))},g.prototype._pathString=e.prototype._pathString,g.prototype._trailString=e.prototype._trailString,b.exports=g},{"./circle":2,"./shape":7,"./utils":8}],7:[function(a,b,c){var d=a("./path"),e=a("./utils"),f="Object is destroyed",g=function h(a,b){if(!(this instanceof h))throw new Error("Constructor was called without new keyword");if(0!==arguments.length){this._opts=e.extend({color:"#555",strokeWidth:1,trailColor:null,trailWidth:null,fill:null,text:{style:{color:null,position:"absolute",left:"50%",top:"50%",padding:0,margin:0,transform:{prefix:!0,value:"translate(-50%, -50%)"}},autoStyleContainer:!0,alignToBottom:!0,value:null,className:"progressbar-text"},svgStyle:{display:"block",width:"100%"},warnings:!1},b,!0),e.isObject(b)&&void 0!==b.svgStyle&&(this._opts.svgStyle=b.svgStyle),e.isObject(b)&&e.isObject(b.text)&&void 0!==b.text.style&&(this._opts.text.style=b.text.style);var c,f=this._createSvgView(this._opts);if(c=e.isString(a)?document.querySelector(a):a,!c)throw new Error("Container does not exist: "+a);this._container=c,this._container.appendChild(f.svg),this._opts.warnings&&this._warnContainerAspectRatio(this._container),this._opts.svgStyle&&e.setStyles(f.svg,this._opts.svgStyle),this.svg=f.svg,this.path=f.path,this.trail=f.trail,this.text=null;var g=e.extend({attachment:void 0,shape:this},this._opts);this._progressPath=new d(f.path,g),e.isObject(this._opts.text)&&null!==this._opts.text.value&&this.setText(this._opts.text.value)}};g.prototype.animate=function(a,b,c){if(null===this._progressPath)throw new Error(f);this._progressPath.animate(a,b,c)},g.prototype.stop=function(){if(null===this._progressPath)throw new Error(f);void 0!==this._progressPath&&this._progressPath.stop()},g.prototype.destroy=function(){if(null===this._progressPath)throw new Error(f);this.stop(),this.svg.parentNode.removeChild(this.svg),this.svg=null,this.path=null,this.trail=null,this._progressPath=null,null!==this.text&&(this.text.parentNode.removeChild(this.text),this.text=null)},g.prototype.set=function(a){if(null===this._progressPath)throw new Error(f);this._progressPath.set(a)},g.prototype.value=function(){if(null===this._progressPath)throw new Error(f);return void 0===this._progressPath?0:this._progressPath.value()},g.prototype.setText=function(a){if(null===this._progressPath)throw new Error(f);null===this.text&&(this.text=this._createTextContainer(this._opts,this._container),this._container.appendChild(this.text)),e.isObject(a)?(e.removeChildren(this.text),this.text.appendChild(a)):this.text.innerHTML=a},g.prototype._createSvgView=function(a){var b=document.createElementNS("http://www.w3.org/2000/svg","svg");this._initializeSvg(b,a);var c=null;(a.trailColor||a.trailWidth)&&(c=this._createTrail(a),b.appendChild(c));var d=this._createPath(a);return b.appendChild(d),{svg:b,path:d,trail:c}},g.prototype._initializeSvg=function(a,b){a.setAttribute("viewBox","0 0 100 100")},g.prototype._createPath=function(a){var b=this._pathString(a);return this._createPathElement(b,a)},g.prototype._createTrail=function(a){var b=this._trailString(a),c=e.extend({},a);return c.trailColor||(c.trailColor="#eee"),c.trailWidth||(c.trailWidth=c.strokeWidth),c.color=c.trailColor,c.strokeWidth=c.trailWidth,c.fill=null,this._createPathElement(b,c)},g.prototype._createPathElement=function(a,b){var c=document.createElementNS("http://www.w3.org/2000/svg","path");return c.setAttribute("d",a),c.setAttribute("stroke",b.color),c.setAttribute("stroke-width",b.strokeWidth),b.fill?c.setAttribute("fill",b.fill):c.setAttribute("fill-opacity","0"),c},g.prototype._createTextContainer=function(a,b){var c=document.createElement("div");c.className=a.text.className;var d=a.text.style;return d&&(a.text.autoStyleContainer&&(b.style.position="relative"),e.setStyles(c,d),d.color||(c.style.color=a.color)),this._initializeTextContainer(a,b,c),c},g.prototype._initializeTextContainer=function(a,b,c){},g.prototype._pathString=function(a){throw new Error("Override this function for each progress bar")},g.prototype._trailString=function(a){throw new Error("Override this function for each progress bar")},g.prototype._warnContainerAspectRatio=function(a){if(this.containerAspectRatio){var b=window.getComputedStyle(a,null),c=parseFloat(b.getPropertyValue("width"),10),d=parseFloat(b.getPropertyValue("height"),10);e.floatEquals(this.containerAspectRatio,c/d)||(console.warn("Incorrect aspect ratio of container","#"+a.id,"detected:",b.getPropertyValue("width")+"(width)","/",b.getPropertyValue("height")+"(height)","=",c/d),console.warn("Aspect ratio of should be",this.containerAspectRatio))}},b.exports=g},{"./path":5,"./utils":8}],8:[function(a,b,c){function d(a,b,c){a=a||{},b=b||{},c=c||!1;for(var e in b)if(b.hasOwnProperty(e)){var f=a[e],g=b[e];c&&l(f)&&l(g)?a[e]=d(f,g,c):a[e]=g}return a}function e(a,b){var c=a;for(var d in b)if(b.hasOwnProperty(d)){var e=b[d],f="\\{"+d+"\\}",g=new RegExp(f,"g");c=c.replace(g,e)}return c}function f(a,b,c){for(var d=a.style,e=0;e<p.length;++e){var f=p[e];d[f+h(b)]=c}d[b]=c}function g(a,b){m(b,function(b,c){null!==b&&void 0!==b&&(l(b)&&b.prefix===!0?f(a,c,b.value):a.style[c]=b)})}function h(a){return a.charAt(0).toUpperCase()+a.slice(1)}function i(a){return"string"==typeof a||a instanceof String}function j(a){return"function"==typeof a}function k(a){return"[object Array]"===Object.prototype.toString.call(a)}function l(a){if(k(a))return!1;var b=typeof a;return"object"===b&&!!a}function m(a,b){for(var c in a)if(a.hasOwnProperty(c)){var d=a[c];b(d,c)}}function n(a,b){return Math.abs(a-b)<q}function o(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var p="Webkit Moz O ms".split(" "),q=.001;b.exports={extend:d,render:e,setStyle:f,setStyles:g,capitalize:h,isString:i,isFunction:j,isObject:l,forEachObject:m,floatEquals:n,removeChildren:o}},{}]},{},[4])(4)});
+ </script>
+
+  <style>
+
+  body{
+    overflow: hidden;
+  }
+
+ .musegain_absolute_preloader{
+    z-index: 200000 !important;
+ }
+
+ .musegain_preloader_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+    filter:alpha(opacity=100);
+    -moz-opacity:1.0;
+    -khtml-opacity: 1.0;
+    opacity: 1.0;
+    z-index: 100000;
+}
+
+.musegain_absolute_preloader img.temp_no_id{
+    display:none;
+}
+ </style>
+
+ <style>
+    #u12947 .musegain_preloader_container svg{
+        height: 100%;
+        width: 100%;
+    }
+ </style>
+
+
+
+                <style>
+                .musegain_absolute_preloader{
+                    position: fixed !important;
+                    top: 50% !important;
+                    left: 50% !important;
+                    transform: translate(-50%, -50%);
+                    transform: -webkit-translate(-50%, -50%);
+                    transform: -moz-translate(-50%, -50%);
+                    transform: -ms-translate(-50%, -50%);
+                    margin: 0 !important;
+                 }
+                </style>
+
+
+                            <style>
+                                #u12947 .musegain_preloader_container svg{
+                                height: 1px !important;
+                                }
+                            </style>
+
+<style>
+#u13805 { font-size: 1px; line-height: 0px;}
+#item-1 {
+background-image:url( assets/clubswf.png);
+}
+#item-2 {
+background-image:url( assets/clubs2wf.png);
+}
+#item-3 {
+background-image:url( assets/memberswf.png);
+}
+#item-4 {
+background-image:url( assets/votingwf.png);
+}
+#item-5 {
+background-image:url( assets/yourteamwf.png);
+}
+#item-6 {
+background-image:url( assets/alleventscardigin.png);
+}
+#item-7 {
+background-image:url(assets/messagewf.png);
+}
+
+</style>
+
+
+    <style type="text/css">
+    #u13802 { font-size: 1px; line-height: 0px;}
+    .example-desc {margin:3px 0;padding:5px;}
+    #carousel {width:100%;height:623px;position:relative;clear:both;overflow:hidden;background: transparent;}
+    #carousel img {visibility:hidden;cursor:pointer;}
+    .split-left {width:450px;float:left;}
+    .split-right {width:400px;float:left;margin-left:10px;}
+    #callback-output {height:250px;overflow:scroll;}
+    textarea#newoptions {width:430px;}
+    </style>
+
+
+ </head>
+ <body>
+
+  <div class="breakpoint active" id="bp_infinity" data-min-width="1025"><!-- responsive breakpoint node -->
+   <div class="clearfix" id="page"><!-- group -->
+    <ul class="AccordionWidget musegain_absolute_preloader clearfix grpelem" id="accordionu12944"><!-- vertical box -->
+     <li class="AccordionPanel clearfix colelem" id="u12945"><!-- vertical box --><div class="AccordionPanelTab clearfix colelem" id="u12950-3"><!-- content --><p class="shared_content" data-content-guid="u12950-3_0_content">&nbsp;</p></div><div class="AccordionPanelContent clearfix colelem" id="u12946"><!-- column --><div class="size_fixed colelem shared_content" id="u12948" data-content-guid="u12948_content"><!-- custom html -->
+            <div class="musegain_preloader_percentage"></div>
+        </div><div class="size_fixed colelem shared_content" id="u12947" data-content-guid="u12947_content"><!-- custom html -->
+            <div class="musegain_preloader_container"></div>
+        </div><div class="clearfix colelem shared_content" id="u12949-4" data-content-guid="u12949-4_content"><!-- content --><p>Loading</p></div></div></li>
+    </ul>
+    <div class="size_fixed grpelem shared_content" id="u13805" data-content-guid="u13805_content"><!-- custom html -->
+
+
+
+    </div>
+    <div class="clearfix grpelem" id="pu4560"><!-- column -->
+     <div class="clip_frame colelem" id="u4560"><!-- image -->
+      <img class="block temp_no_img_src" id="u4560_img" data-orig-src="images/cardiginlogowbtight.png?crc=34989605" alt="" width="132" height="173" src="images/blank.gif?crc=4208392903"/>
+     </div>
+     <div class="clearfix colelem" id="u7886"><!-- group -->
+      <img class="grpelem temp_no_img_src" id="u5031-4" alt="For Your Best School Year" width="177" height="60" data-orig-src="images/u5031-4.png?crc=3901391138" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <div class="rounded-corners grpelem shared_content" id="u5035" data-content-guid="u5035_content"><!-- simple frame --></div>
+     </div>
+     <div class="clip_frame ose_pre_init colelem" id="u12188"><!-- svg -->
+      <img class="svg temp_no_img_src" id="u12184" data-orig-src="images/scrolldown.svg?crc=3899341416" width="175" height="175" alt="" data-mu-svgfallback="images/scrolldown_poster_.png?crc=335739211" src="images/blank.gif?crc=4208392903"/>
+     </div>
+     <img class="ose_pre_init colelem temp_no_img_src" id="u5063-6" alt="It's Better to Know. Period." width="365" height="124" data-orig-src="images/u5063-6.png?crc=4030560020" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+     <div class="clearfix colelem" id="pu5047"><!-- group -->
+      <div class="clip_frame ose_pre_init grpelem" id="u5047"><!-- svg -->
+       <img class="svg temp_no_img_src" id="u5043" data-orig-src="images/whiteboardandmarkers.svg?crc=4160607023" width="325" height="325" alt="" data-mu-svgfallback="images/whiteboardandmarkers_poster_.png?crc=3942594805" src="images/blank.gif?crc=4208392903"/>
+      </div>
+      <div class="clearfix grpelem" id="u5095"><!-- group -->
+       <div class="clip_frame ose_pre_init grpelem" id="u5071"><!-- svg -->
+        <img class="svg temp_no_img_src" id="u5067" data-orig-src="images/rulerandcalculator.svg?crc=269903699" width="378" height="378" alt="" data-mu-svgfallback="images/rulerandcalculator_poster_.png?crc=3966387471" src="images/blank.gif?crc=4208392903"/>
+       </div>
+       <div class="clip_frame ose_pre_init grpelem" id="u5085"><!-- svg -->
+        <img class="svg temp_no_img_src" id="u5081" data-orig-src="images/cardiginsvgblue.svg?crc=343067064" width="253" height="253" alt="" data-mu-svgfallback="images/cardiginsvgblue_poster_.png?crc=4026854634" src="images/blank.gif?crc=4208392903"/>
+       </div>
+      </div>
+     </div>
+     <div class="clearfix colelem" id="pu5223"><!-- group -->
+      <div class="clip_frame grpelem shared_content" id="u5223" data-content-guid="u5223_content"><!-- svg -->
+       <img class="svg temp_no_img_src" id="u5219" data-orig-src="images/handywebtools.svg?crc=21383011" width="439" height="194" alt="" data-mu-svgfallback="images/handywebtools_poster_.png?crc=108833119" src="images/blank.gif?crc=4208392903"/>
+      </div>
+      <img class="ose_pre_init grpelem temp_no_img_src" id="u7054-8" alt="Power in Unity! Cardigin is a new platform designed specifically for post-secondary institutions. Our team strives to help these institutions who have an interest in unifying its community while also opening students to a wide range of opportunities and networks outside of their school. With Cardigin, we hope to provide our users and our close partners with an experience catered to their needs. " width="305" height="473" data-orig-src="images/u7054-8.png?crc=505511550" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <img class="ose_pre_init grpelem temp_no_img_src" id="u7058-10" alt="Growth in Numbers, together. The first aspect of our product is focused to primarily help organizers such as post-secondary institutions and student-run organizations. Our team at Cardigin has built a web based data aggregation tool with these organizers in mind. With Cardigin, organizers are able to see data specific for their needs. For instance, our tool is able to calculate how many students attended an event hosted at your school and take into consideration other factors that could've affected the attendance numbers. " width="305" height="473" data-orig-src="images/u7058-10.png?crc=3877284962" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <img class="ose_pre_init grpelem temp_no_img_src" id="u7064-7" alt="Asking the right Questions? Do more students show up to an event when the weathers nice? Are students more active in their communities on a Wednesday? Our algorithm builds itself into something far more accurate further into the year. As we figure out better variables and equations, we can calculate for spurious data and unreliable correlations. Your work has a significant impact in your community so we understand the significance of giving our users the best possible experience through reliable and significant solutions." width="305" height="473" data-orig-src="images/u7064-7.png?crc=428263736" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <div class="browser_width grpelem shared_content" id="u7756-bw" data-content-guid="u7756-bw_content">
+       <div id="u7756"><!-- simple frame --></div>
+      </div>
+      <div class="size_fixed grpelem shared_content" id="u13802" data-content-guid="u13802_content"><!-- custom html -->
+
+    <div id="carousel">
+        <a href="#" id="img1"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="450" hright="315" style="background-repeat: no-repeat; background-size:cover; background-position: center;" id="item-1"/></a>
+            <a href="#" id="img2"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="450" hright="315" style="background-repeat: no-repeat; background-size:cover; background-position: center;" id="item-2"/></a>
+            <a href="#" id="img3"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="450" hright="315" style="background-repeat: no-repeat; background-size:cover; background-position: center;" id="item-3"/></a>
+            <a href="#" id="img4"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="450" hright="315" style="background-repeat: no-repeat; background-size:cover; background-position: center;" id="item-4"/></a>
+            <a href="#" id="img5"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="450" hright="315" style="background-repeat: no-repeat; background-size:cover; background-position: center;" id="item-5"/></a>
+            <a href="#" id="img6"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="450" hright="315" style="background-repeat: no-repeat; background-size:cover; background-position: center;" id="item-6"/></a>
+            <a href="#" id="img7"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="450" hright="315" style="background-repeat: no-repeat; background-size:cover; background-position: center;" id="item-7"/></a>
+    </div>
+
+
+      </div>
+      <img class="grpelem temp_no_img_src" id="u13944-4" alt="Click on the image to scroll!" width="232" height="91" data-orig-src="images/u13944-4.png?crc=449892399" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+     </div>
+     <div class="clearfix colelem shared_content" id="u13841-4" data-content-guid="u13841-4_content"><!-- content -->
+      <p>Final Product May Look Different. Images Shown are a Work in Progress</p>
+     </div>
+     <img class="ose_pre_init colelem temp_no_img_src" id="u5604-6" alt="Hey Champ. Go for Gold! " width="276" height="122" data-orig-src="images/u5604-6.png?crc=4181934709" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+     <div class="clearfix colelem" id="pu5876"><!-- group -->
+      <div class="browser_width grpelem" id="u5876-bw">
+       <div class="gradient" id="u5876"><!-- column -->
+        <div class="clearfix" id="u5876_align_to_page">
+         <div class="clip_frame colelem" id="u5884"><!-- svg -->
+          <img class="svg temp_no_img_src" id="u5880" data-orig-src="images/theresanappforthat.svg?crc=3990976054" width="720" height="720" alt="" data-mu-svgfallback="images/theresanappforthat_poster_.png?crc=103922060" src="images/blank.gif?crc=4208392903"/>
+         </div>
+         <div class="clearfix colelem" id="pu9235-7"><!-- group -->
+          <img class="ose_pre_init grpelem temp_no_img_src" id="u9235-7" alt="Experience to Socialize. Create new moments in life through experience. Socialize and share these new moments in a new chapter of your life. Students will be able to do various things regarding their life in college. First, students can shares images, videos, and text with followers from their school and users outside of their school but who also happens to have a Cardigin account. The content you upload helps out the student organizations you cherish too! Events and Organizations can add your relevant content to their collection to show other students what the experience is like in their group using the appropriate tags. " width="305" height="473" data-orig-src="images/u9235-7.png?crc=4027204888" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+          <img class="ose_pre_init grpelem temp_no_img_src" id="u9236-7" alt="Breaking the Ice. A Friend at a Time. Taking a huge leap into a new chapter of your life can be intimidating. Moving to a new school doesn't make it any easier. Cardigin gives freshmen students the opportunity to start interacting with their new community and better adapt to the new school environment. Cardigin will organize fun and interactive games that will connect students together. Have you ever been rewarded for making friends? Better get used to it with us!" width="305" height="473" data-orig-src="images/u9236-7.png?crc=480396085" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+          <img class="ose_pre_init grpelem temp_no_img_src" id="u9237-7" alt="Cardigin Harmony: Digital and Real. We believe that the most useful Apps are the Apps that serve you in the real world. Our team, knowledgeable with the digital world, have profound moments where they figure out how to improve the real world. Simply put, Cardigin looks for the harmony between the digital and the real world. For instance, one core feature is the utilization of Quick Read codes (QR) and our close collaboration with you. Student’s, when signing up for an account, enter their student details which organizations (like a student clubs or student societies) generally need to keep track of their members. Students will be able to conveniently sign up for these organizations using our App at home or by taking a picture of an organization specific QR code generated by our team. Cardigin built in so many useful pictures, you're going to ask why you didn't have this sooner!" width="305" height="487" data-orig-src="images/u9237-7.png?crc=393417096" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+         </div>
+         <div class="clearfix colelem" id="pu5908-8"><!-- group -->
+          <img class="ose_pre_init grpelem temp_no_img_src" id="u5908-8" alt="Centralized Experience in a Decentralized Environment. Woah. " width="531" height="147" data-orig-src="images/u5908-8.png?crc=15611454" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+          <img class="ose_pre_init grpelem temp_no_img_src" id="u9393-7" alt="It's getting Crowded... It seems like everyone and everything has an App. Organizations and institutions all build an App just to say they have an App. But whatever they build, often times, is awful. Sorry to be brutally honest. That's why Cardigin exist. We're here to flip that on its head so that our clients don't end up like the other guys (don't be like the others). We built something you can use and have a reason to use. It works well and it's fun! Give us a try and you'll soon agree with us that we got the recipe just right. " width="305" height="473" data-orig-src="images/u9393-7.png?crc=3836181874" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+          <img class="ose_pre_init grpelem temp_no_img_src" id="u9394-7" alt="First and foremost; You're a Student. We get it, money is tight. Student Organizers don't have the budget to advertise their extravagant events. We want to do what we can to help you and your students so we're offering our services to you folks for free. In addition, we'll keep in touch to continue improving our product so that Cardigin works for you and not the other way around. " width="305" height="473" data-orig-src="images/u9394-7.png?crc=311779524" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+          <img class="ose_pre_init grpelem temp_no_img_src" id="u9395-7" alt="Removing the Clutter and the Mess. There's beauty in simplicity and cleanliness. We're here to organize your home. Because we know from the get-go which school each one of our users attend, we are able to build a centralized experience for both the student and the organizers. When a student club promotes an event on social media, the amount of publicity is limited to the number of times their event is shared by event coordinators or club members. In addition, those shares are really annoying especially if you don't care for them. Like, why do I (a student from Example University) care if my friend from high school is organizing a donut sale at Template University? Why do I even need to know that there is a donut sale at there? So Cardigin takes this into consideration and only show users events relevant to them." width="305" height="473" data-orig-src="images/u9395-7.png?crc=123989921" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+          <div class="clip_frame grpelem" id="u13185"><!-- image -->
+           <img class="block temp_no_img_src" id="u13185_img" data-orig-src="images/spotlight.png?crc=285395837" alt="" width="720" height="720" src="images/blank.gif?crc=4208392903"/>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="browser_width grpelem" id="u8685-bw">
+       <div id="u8685"><!-- group -->
+        <div class="clearfix" id="u8685_align_to_page">
+         <div class="clip_frame ose_pre_init grpelem" id="u5665"><!-- svg -->
+          <img class="svg temp_no_img_src" id="u5661" data-orig-src="images/cardigincartoon1.svg?crc=3861384200" width="547" height="547" alt="" data-mu-svgfallback="images/cardigincartoon1_poster_.png?crc=279115318" src="images/blank.gif?crc=4208392903"/>
+         </div>
+         <div class="clip_frame ose_pre_init grpelem" id="u5671"><!-- svg -->
+          <img class="svg temp_no_img_src" id="u5667" data-orig-src="images/cardigincartoon2.svg?crc=3760872695" width="551" height="551" alt="" data-mu-svgfallback="images/cardigincartoon2_poster_.png?crc=4233898451" src="images/blank.gif?crc=4208392903"/>
+         </div>
+         <div class="clip_frame ose_pre_init grpelem" id="u5677"><!-- svg -->
+          <img class="svg temp_no_img_src" id="u5673" data-orig-src="images/cardigincartoon3.svg?crc=4138328065" width="549" height="549" alt="" data-mu-svgfallback="images/cardigincartoon3_poster_.png?crc=4022691672" src="images/blank.gif?crc=4208392903"/>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="clip_frame ose_pre_init grpelem" id="u5594"><!-- svg -->
+       <img class="svg temp_no_img_src" id="u5590" data-orig-src="images/artboard-1.svg?crc=4250357604" width="709" height="709" alt="" data-mu-svgfallback="images/artboard%201_poster_.png?crc=4040108897" src="images/blank.gif?crc=4208392903"/>
+      </div>
+      <img class="ose_pre_init grpelem temp_no_img_src" id="u8602-7" alt="Gold for Greatness. Our team awards organizations which we believe have excelled in terms of management and organization through our product. We are proud to work on grants and medals that will be awarded to those student clubs who have grown tremendously throughout the school year and have been great examples of what is possible with Cardigin. " width="305" height="473" data-orig-src="images/u8602-7.png?crc=3901363930" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <img class="ose_pre_init grpelem temp_no_img_src" id="u8603-8" alt="Your New Title: Standout Student. The school recognizes the best of the best and so do we. We award students will prizes and titles for their hard work. We want to encourage your students to work to better your community and give them a platform to change the world. We also want your students to take advantage of the opportunities offered by your school and your community. Think of us as the people adding the sprinkles on a really nice sundae. " width="305" height="473" data-orig-src="images/u8603-8.png?crc=4055965120" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <img class="ose_pre_init grpelem temp_no_img_src" id="u8604-7" alt="Awesome Possums of the World! You're awesome and the world should know. Not only do we recognize talent and hard work but we want to share it with the world. Cardigin is a platform where you can share your work to our growing community, regardless of where they are. We do this because we believe there are individuals who create things worth sharing with the rest of world. " width="305" height="473" data-orig-src="images/u8604-7.png?crc=513623463" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+     </div>
+     <div class="clearfix colelem" id="pu5916"><!-- group -->
+      <div class="clip_frame ose_pre_init grpelem" id="u5916"><!-- svg -->
+       <img class="svg temp_no_img_src" id="u5912" data-orig-src="images/bubbly.svg?crc=4273290824" width="720" height="720" alt="" data-mu-svgfallback="images/bubbly_poster_.png?crc=125940332" src="images/blank.gif?crc=4208392903"/>
+      </div>
+      <div class="clearfix ose_pre_init grpelem shared_content" id="u5926-4" data-content-guid="u5926-4_content"><!-- content -->
+       <p id="u5926-2">Cheers to a Good Year.</p>
+      </div>
+      <img class="ose_pre_init grpelem temp_no_img_src" id="u10451-12" alt="Finish as Strong as you Started. We believe that a student will succeed if they start off really strong and stay motivated to continue working hard. Cardigin will be your motivation and your personal school trainer. We'll design a plan for the students so that they can focus on studying and staying active in their community. So here's our plan for students in three steps." width="305" height="473" data-orig-src="images/u10451-12.png?crc=4041388409" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <img class="ose_pre_init grpelem temp_no_img_src" id="u10473-7" alt="Step 1: Start Strong Let's focus on the first year students who are being introduced to college life for the first time. Remember that feeling? A little anxious, nervous but excited at the same time? Afraid of losing old pals from high school and afraid that you might not be able to make new friends in college? Well, we have the perfect ice breaker. Exclusive to those students participating in their school orientation, students will be prompted to go around their school and start taking pictures of other student QR codes. Once these pictures are taken, the two students will be consider 'friends' on Cardigin. In addition, students will earn points for every 'friend' they make during the Orientation. These points can be used to win sweet prizes such as gift cards or... gift cards (still working on it). Is it weird to add strangers like this? Not at all! We believe this is the perfect way to start meeting people and a great conversation starter!" width="984" height="206" data-orig-src="images/u10473-7.png?crc=161243307" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+     </div>
+     <img class="ose_pre_init colelem temp_no_img_src" id="u10474-8" alt="Step 2: Don't wait to Participate Ahhh...the school year finally started and there are clubs looking to grab my attention. The club organizers are yelling out loud so that all could hear if &quot;anyone is interested in the ___________ club.&quot; I'm not certain if I am interested in that club but it really doesn't hurt to try new things. They ask me to fill in my information such as my student number, student email, my full name, and etc. But then, it dawns on me that I have to do this tedious writing over and over again every time I find a club I might find interesting. That's where Cardigin's got my back. With the app, I can simply take a picture of the club's QR code and...VOILA! I'm signed up for the club with one pain free picture! Now these clubs that I signed up for are hosting these really cool and exciting events! What's even better is that the event plans to have a QR code unique to that event I plan on attending. What this means is that I can show my friends on Cardigin that I went and did some amazing things with my new friends I met in the school club. Not only that, I earned myself some Cardigin points that goes towards my personal experience level. My chances of winning cool prizes from Cardigin goes up as I level up! Since I'm level 28 now, I know I have a better chance of winning that gift card than those who are level 1 or level 27. " width="984" height="281" data-orig-src="images/u10474-8.png?crc=4142329601" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+     <img class="ose_pre_init colelem temp_no_img_src" id="u10475-7" alt="Step 3: The Graduation Before the Commencement The semester is finally over and Cardigin is now announcing the hardest working student across the country. I worked really hard and attended a lot of events so I hope the team at Cardigin recognizes it. I heard they're giving away a sweet prize for the winner." width="984" height="121" data-orig-src="images/u10475-7.png?crc=4189872002" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+     <div class="clearfix colelem" id="pu5934"><!-- group -->
+      <div class="clip_frame ose_pre_init grpelem" id="u5934"><!-- svg -->
+       <img class="svg temp_no_img_src" id="u5930" data-orig-src="images/safeandsecure.svg?crc=4283953555" width="604" height="604" alt="" data-mu-svgfallback="images/safeandsecure_poster_.png?crc=394338046" src="images/blank.gif?crc=4208392903"/>
+      </div>
+      <div class="clearfix ose_pre_init grpelem shared_content" id="u5944-8" data-mu-ie-matrix="progid:DXImageTransform.Microsoft.Matrix(M11=0.9816,M12=0.1908,M21=-0.1908,M22=0.9816,SizingMethod='auto expand')" data-mu-ie-matrix-dx="-19" data-mu-ie-matrix-dy="-33" data-content-guid="u5944-8_content"><!-- content -->
+       <p>Safe,</p>
+       <p>Secure,</p>
+       <p>and Serious.</p>
+      </div>
+     </div>
+     <img class="ose_pre_init colelem temp_no_img_src" id="u10723-29" alt="We totally get that everyone is concerned about privacy and their security. User concerns are completely justified and companies should take responsibility especially when their costumers trusted them with valuable information. In the wake of some public breaches in the industry, it is clear that a technology companies such as ours need to take the proper steps necessary in order to protect our users and clients. We recognize the great responsibility of keeping our company ethical and, for the benefit of the brand and our shareholders, we will take every step to honour our users’ trust. The only way for our company to be reflected in a good light is to do right. So here's what we'll do a) Establish a Code of Ethics for individuals on the Cardigin team and the company in its entirety. b) Be completely transparent with how Cardigin uses each individuals data. c) Create a feedback forum to get customer input. d) Comply with and meet the highest legal standards for all our users. e) Set in place corporate deterrences and actions against unethical behaviour in the company. Because ethics are both personally and culturally defined, differences of opinion arise as to what is ethical or unethical. However, our definition of ethics is the prioritization of our users and their communities. We vow to prioritize our users’ safety and privacy before all else and protect their communities while doing so. Another possible obstacle is the collision between what is the law and what is ethical. It would be ideal to distance ourselves from such a situation but it would be irresponsible for our company to not have a plan of action for this scenario. In these cases, we will follow the law regardless of the social norms. However, Cardigin vows to stand up for our users while maintaining order by having discussions with state representatives and by providing advocates with a platform where they are able to express their themselves. " width="985" height="819" data-orig-src="images/u10723-29.png?crc=4108953732" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+     <div class="browser_width colelem shared_content" id="u10957-bw" data-content-guid="u10957-bw_content">
+      <div id="u10957"><!-- simple frame --></div>
+     </div>
+    </div>
+    <div class="clearfix grpelem" id="pu94"><!-- group -->
+     <div class="browser_width shared_content" id="u94-bw" data-content-guid="u94-bw_content">
+      <div id="u94"><!-- simple frame --></div>
+     </div>
+     <img class="temp_no_img_src shared_content" id="u102-4" alt="Cardigin" width="79" height="25" data-orig-src="images/u102-4.png?crc=4192707660" src="images/blank.gif?crc=4208392903" data-content-guid="u102-4_content"/><!-- rasterized frame -->
+     <nav class="MenuBar clearfix" id="menuu205"><!-- horizontal box -->
+      <div class="MenuItemContainer clearfix grpelem" id="u301"><!-- vertical box -->
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu MuseMenuActive clearfix colelem" id="u304" href="index.html"><!-- horizontal box --><img class="MenuItemLabel NoWrap grpelem" id="u307" alt="Organizations" src="images/blank.gif?crc=4208392903"/><!-- state-based BG images --></a>
+      </div>
+      <div class="MenuItemContainer clearfix grpelem" id="u280"><!-- vertical box -->
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u283" href="partner-access.html"><!-- horizontal box --><img class="MenuItemLabel NoWrap grpelem" id="u286" alt="Partner Access" src="images/blank.gif?crc=4208392903"/><!-- state-based BG images --></a>
+      </div>
+     </nav>
+    </div>
+    <div class="verticalspacer" data-offset-top="11863" data-content-above-spacer="11862" data-content-below-spacer="281"></div>
+   </div>
+   <div class="preload_images">
+    <img class="preload temp_no_img_src" data-orig-src="images/u307-r.png?crc=4182398412" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u307-a.png?crc=4182398412" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u286-r.png?crc=480980739" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u286-a.png?crc=480980739" alt="" src="images/blank.gif?crc=4208392903"/>
+   </div>
+  </div>
+  <div class="breakpoint" id="bp_1024" data-min-width="687" data-max-width="1024"><!-- responsive breakpoint node -->
+   <div class="clearfix borderbox temp_no_id" data-orig-id="page"><!-- group -->
+    <ul class="AccordionWidget musegain_absolute_preloader clearfix grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fluidx" data-orig-id="accordionu12944"><!-- vertical box -->
+     <li class="AccordionPanel clearfix colelem temp_no_id" data-orig-id="u12945"><!-- vertical box --><div class="AccordionPanelTab clearfix colelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u12950-3"><!-- content --><span class="placeholder" data-placeholder-for="u12950-3_0_content"><!-- placeholder node --></span></div><div class="AccordionPanelContent clearfix colelem temp_no_id" data-orig-id="u12946"><!-- column --><span class="size_fixed colelem placeholder" data-placeholder-for="u12948_content"><!-- placeholder node --></span><span class="size_fixed colelem placeholder" data-placeholder-for="u12947_content"><!-- placeholder node --></span><span class="clearfix colelem placeholder" data-placeholder-for="u12949-4_content"><!-- placeholder node --></span></div></li>
+    </ul>
+    <span class="size_fixed grpelem placeholder" data-placeholder-for="u13805_content"><!-- placeholder node --></span>
+    <span class="browser_width placeholder" data-placeholder-for="u94-bw_content"><!-- placeholder node --></span>
+    <div class="clearfix grpelem temp_no_id" data-orig-id="pu4560"><!-- column -->
+     <div class="clip_frame colelem temp_no_id" data-sizePolicy="fluidWidthHeight" data-pintopage="page_fixedCenter" data-orig-id="u4560"><!-- image -->
+      <img class="block temp_no_id temp_no_img_src" data-orig-src="images/cardiginlogowbtight.png?crc=34989605" alt="" data-heightwidthratio="1.312" data-image-width="125" data-image-height="164" data-orig-id="u4560_img" src="images/blank.gif?crc=4208392903"/>
+     </div>
+     <div class="clearfix colelem temp_no_id" data-orig-id="u7886"><!-- group -->
+      <img class="grpelem temp_no_id temp_no_img_src" alt="For Your Best School Year" width="177" height="60" data-orig-src="images/u5031-42.png?crc=3901391138" data-orig-id="u5031-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <span class="rounded-corners grpelem placeholder" data-placeholder-for="u5035_content"><!-- placeholder node --></span>
+     </div>
+     <div class="clearfix colelem" id="pu8016"><!-- group -->
+      <div class="browser_width grpelem" id="u8016-bw">
+       <div class="gradient" id="u8016"><!-- column -->
+        <div class="clearfix" id="u8016_align_to_page">
+         <div class="position_content" id="u8016_position_content">
+          <div class="clip_frame colelem" id="u15616" data-sizePolicy="fluidWidthHeight" data-pintopage="page_fixedCenter"><!-- image -->
+           <img class="block temp_no_img_src" id="u15616_img" data-orig-src="images/bettertoknow.png?crc=60886981" alt="" data-heightwidthratio="0.5629820051413882" data-image-width="778" data-image-height="438" src="images/blank.gif?crc=4208392903"/>
+          </div>
+          <div class="clearfix colelem" id="pu7054-8"><!-- group -->
+           <img class="grpelem temp_no_id temp_no_img_src" alt="Power in Unity! Cardigin is a new platform designed specifically for post-secondary institutions. Our team strives to help these institutions who have an interest in unifying its community while also opening students to a wide range of opportunities and networks outside of their school. With Cardigin, we hope to provide our users and our close partners with an experience catered to their needs. " data-orig-src="images/u7054-82.png?crc=3840418948" data-image-width="981" data-orig-id="u7054-8" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+           <img class="grpelem temp_no_id temp_no_img_src" alt="Growth in Numbers, together. The first aspect of our product is focused to primarily help organizers such as post-secondary institutions and student-run organizations. Our team at Cardigin has built a web based data aggregation tool with these organizers in mind. With Cardigin, organizers are able to see data specific for their needs. For instance, our tool is able to calculate how many students attended an event hosted at your school and take into consideration other factors that could've affected the attendance numbers. " data-orig-src="images/u7058-102.png?crc=203447521" data-image-width="982" data-orig-id="u7058-10" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+          </div>
+          <img class="colelem temp_no_id temp_no_img_src" alt="Asking the right Questions? Do more students show up to an event when the weathers nice? Are students more active in their communities on a Wednesday? Our algorithm builds itself into something far more accurate further into the year. As we figure out better variables and equations, we can calculate for spurious data and unreliable correlations. Your work has a significant impact in your community so we understand the significance of giving our users the best possible experience through reliable and significant solutions." data-orig-src="images/u7064-72.png?crc=196872300" data-image-width="981" data-orig-id="u7064-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+          <span class="clip_frame colelem placeholder" data-placeholder-for="u5223_content"><!-- placeholder node --></span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <span class="browser_width grpelem placeholder" data-placeholder-for="u7756-bw_content"><!-- placeholder node --></span>
+      <div class="browser_width grpelem" id="u13802-bw">
+       <span class="size_browser_width placeholder" data-placeholder-for="u13802_content"><!-- placeholder node --></span>
+      </div>
+      <img class="grpelem temp_no_id temp_no_img_src" alt="Click on the image to scroll!" width="232" height="91" data-orig-src="images/u13944-42.png?crc=449892399" data-orig-id="u13944-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+     </div>
+     <span class="clearfix colelem placeholder" data-placeholder-for="u13841-4_content"><!-- placeholder node --></span>
+     <img class="colelem temp_no_id temp_no_img_src" alt="Hey Champ. Go for Gold! " width="276" height="122" data-orig-src="images/u5604-62.png?crc=4181934709" data-orig-id="u5604-6" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+     <div class="clip_frame colelem temp_no_id shared_content" data-sizePolicy="fluidWidthHeight" data-pintopage="page_fixedCenter" data-orig-id="u5594" data-content-guid="u5594_content"><!-- svg -->
+      <img class="svg svg_mar temp_no_id temp_no_img_src" data-orig-src="images/artboard-1.svg?crc=4250357604" onload="this.style.height=(this.offsetWidth*709/709)+'px'" alt="" data-mu-svgfallback="images/artboard%201_poster_.png?crc=4040108897" data-heightwidthratio="1" data-image-width="709" data-image-height="709" data-orig-id="u5590" src="images/blank.gif?crc=4208392903"/>
+     </div>
+     <div class="browser_width colelem temp_no_id" data-orig-id="u5876-bw">
+      <div class="gradient temp_no_id" data-orig-id="u5876"><!-- column -->
+       <div class="clearfix temp_no_id" data-orig-id="u5876_align_to_page">
+        <div class="position_content" id="u5876_position_content">
+         <img class="colelem temp_no_id temp_no_img_src" alt="Gold for Greatness. Our team awards organizations which we believe have excelled in terms of management and organization through our product. We are proud to work on grants and medals that will be awarded to those student clubs who have grown tremendously throughout the school year and have been great examples of what is possible with Cardigin. " data-orig-src="images/u8602-72.png?crc=169437481" data-image-width="928" data-orig-id="u8602-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+         <img class="colelem temp_no_id temp_no_img_src" alt="Your New Title: Standout Student. The school recognizes the best of the best and so do we. We award students will prizes and titles for their hard work. We want to encourage your students to work to better your community and give them a platform to change the world. We also want your students to take advantage of the opportunities offered by your school and your community. Think of us as the people adding the sprinkles on a really nice sundae. " data-orig-src="images/u8603-82.png?crc=4031295962" data-image-width="928" data-orig-id="u8603-8" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+         <img class="colelem temp_no_id temp_no_img_src" alt="Awesome Possums of the World! You're awesome and the world should know. Not only do we recognize talent and hard work but we want to share it with the world. Cardigin is a platform where you can share your work to our growing community, regardless of where they are. We do this because we believe there are individuals who create things worth sharing with the rest of world. " data-orig-src="images/u8604-72.png?crc=432469871" data-image-width="928" data-orig-id="u8604-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+         <div class="clip_frame colelem" id="u15004" data-sizePolicy="fluidWidthHeight" data-pintopage="page_fixedCenter"><!-- image -->
+          <img class="block temp_no_img_src" id="u15004_img" data-orig-src="images/cardigincartoonexport.png?crc=29109794" alt="" data-heightwidthratio="0.5622222222222222" data-image-width="1350" data-image-height="759" src="images/blank.gif?crc=4208392903"/>
+         </div>
+         <div class="clip_frame colelem temp_no_id shared_content" data-sizePolicy="fluidWidthHeight" data-pintopage="page_fixedCenter" data-orig-id="u5884" data-content-guid="u5884_content"><!-- svg -->
+          <img class="svg svg_mar temp_no_id temp_no_img_src" data-orig-src="images/theresanappforthat.svg?crc=3990976054" onload="this.style.height=(this.offsetWidth*720/720)+'px'" alt="" data-mu-svgfallback="images/theresanappforthat_poster_.png?crc=103922060" data-heightwidthratio="1" data-image-width="720" data-image-height="720" data-orig-id="u5880" src="images/blank.gif?crc=4208392903"/>
+         </div>
+         <img class="colelem temp_no_id temp_no_img_src" alt="Experience to Socialize. Create new moments in life through experience. Socialize and share these new moments in a new chapter of your life. Students will be able to do various things regarding their life in college. First, students can shares images, videos, and text with followers from their school and users outside of their school but who also happens to have a Cardigin account. The content you upload helps out the student organizations you cherish too! Events and Organizations can add your relevant content to their collection to show other students what the experience is like in their group using the appropriate tags. " data-orig-src="images/u9235-72.png?crc=199227567" data-image-width="816" data-orig-id="u9235-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+         <img class="colelem temp_no_id temp_no_img_src" alt="Breaking the Ice. A Friend at a Time. Taking a huge leap into a new chapter of your life can be intimidating. Moving to a new school doesn't make it any easier. Cardigin gives freshmen students the opportunity to start interacting with their new community and better adapt to the new school environment. Cardigin will organize fun and interactive games that will connect students together. Have you ever been rewarded for making friends? Better get used to it with us!" data-orig-src="images/u9236-72.png?crc=4095962646" data-image-width="816" data-orig-id="u9236-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+         <img class="colelem temp_no_id temp_no_img_src" alt="Cardigin Harmony: Digital and Real. We believe that the most useful Apps are the Apps that serve you in the real world. Our team, knowledgeable with the digital world, have profound moments where they figure out how to improve the real world. Simply put, Cardigin looks for the harmony between the digital and the real world. For instance, one core feature is the utilization of Quick Read codes (QR) and our close collaboration with you. Student’s, when signing up for an account, enter their student details which organizations (like a student clubs or student societies) generally need to keep track of their members. Students will be able to conveniently sign up for these organizations using our App at home or by taking a picture of an organization specific QR code generated by our team. Cardigin built in so many useful pictures, you're going to ask why you didn't have this sooner!" data-orig-src="images/u9237-72.png?crc=235280112" data-image-width="816" data-orig-id="u9237-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+         <img class="colelem temp_no_id temp_no_img_src" alt="Centralized Experience in a Decentralized Environment. Woah. " width="531" height="147" data-orig-src="images/u5908-82.png?crc=15611454" data-orig-id="u5908-8" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+         <div class="clearfix colelem" id="pu9393-7"><!-- group -->
+          <img class="grpelem temp_no_id temp_no_img_src" alt="It's getting Crowded... It seems like everyone and everything has an App. Organizations and institutions all build an App just to say they have an App. But whatever they build, often times, is awful. Sorry to be brutally honest. That's why Cardigin exist. We're here to flip that on its head so that our clients don't end up like the other guys (don't be like the others). We built something you can use and have a reason to use. It works well and it's fun! Give us a try and you'll soon agree with us that we got the recipe just right. " data-orig-src="images/u9393-72.png?crc=4142395056" data-image-width="881" data-orig-id="u9393-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+          <div class="clip_frame grpelem temp_no_id" data-sizePolicy="fluidWidthHeight" data-pintopage="page_fixedCenter" data-orig-id="u13185"><!-- image -->
+           <img class="block temp_no_id temp_no_img_src" data-orig-src="images/spotlight.png?crc=285395837" alt="" data-heightwidthratio="1" data-image-width="720" data-image-height="720" data-orig-id="u13185_img" src="images/blank.gif?crc=4208392903"/>
+          </div>
+         </div>
+         <img class="colelem temp_no_id temp_no_img_src" alt="First and foremost; You're a Student. We get it, money is tight. Student Organizers don't have the budget to advertise their extravagant events. We want to do what we can to help you and your students so we're offering our services to you folks for free. In addition, we'll keep in touch to continue improving our product so that Cardigin works for you and not the other way around. " data-orig-src="images/u9394-72.png?crc=472244846" data-image-width="881" data-orig-id="u9394-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+         <img class="colelem temp_no_id temp_no_img_src" alt="Removing the Clutter and the Mess. There's beauty in simplicity and cleanliness. We're here to organize your home. Because we know from the get-go which school each one of our users attend, we are able to build a centralized experience for both the student and the organizers. When a student club promotes an event on social media, the amount of publicity is limited to the number of times their event is shared by event coordinators or club members. In addition, those shares are really annoying especially if you don't care for them. Like, why do I (a student from Example University) care if my friend from high school is organizing a donut sale at Template University? Why do I even need to know that there is a donut sale at there? So Cardigin takes this into consideration and only show users events relevant to them." data-orig-src="images/u9395-72.png?crc=3836272953" data-image-width="881" data-orig-id="u9395-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="clearfix colelem temp_no_id" data-orig-id="pu5916"><!-- group -->
+      <div class="clip_frame grpelem temp_no_id shared_content" data-sizePolicy="fluidWidthHeight" data-pintopage="page_fixedLeft" data-orig-id="u5916" data-content-guid="u5916_content"><!-- svg -->
+       <img class="svg svg_mar temp_no_id temp_no_img_src" data-orig-src="images/bubbly.svg?crc=4273290824" onload="this.style.height=(this.offsetWidth*720/720)+'px'" alt="" data-mu-svgfallback="images/bubbly_poster_.png?crc=125940332" data-heightwidthratio="1" data-image-width="720" data-image-height="720" data-orig-id="u5912" src="images/blank.gif?crc=4208392903"/>
+      </div>
+      <span class="clearfix grpelem placeholder" data-placeholder-for="u5926-4_content"><!-- placeholder node --></span>
+      <img class="grpelem temp_no_id temp_no_img_src" alt="Finish as Strong as you Started. We believe that a student will succeed if they start off really strong and stay motivated to continue working hard. Cardigin will be your motivation and your personal school trainer. We'll design a plan for the students so that they can focus on studying and staying active in their community. So here's our plan for students in three steps." data-orig-src="images/u10451-122.png?crc=91028036" data-image-width="773" data-orig-id="u10451-12" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+     </div>
+     <img class="colelem temp_no_id temp_no_img_src" alt="Step 1: Start Strong Let's focus on the first year students who are being introduced to college life for the first time. Remember that feeling? A little anxious, nervous but excited at the same time? Afraid of losing old pals from high school and afraid that you might not be able to make new friends in college? Well, we have the perfect ice breaker. Exclusive to those students participating in their school orientation, students will be prompted to go around their school and start taking pictures of other student QR codes. Once these pictures are taken, the two students will be consider 'friends' on Cardigin. In addition, students will earn points for every 'friend' they make during the Orientation. These points can be used to win sweet prizes such as gift cards or... gift cards (still working on it). Is it weird to add strangers like this? Not at all! We believe this is the perfect way to start meeting people and a great conversation starter!" data-orig-src="images/u10473-72.png?crc=3938261076" data-image-width="885" data-orig-id="u10473-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+     <img class="colelem temp_no_id temp_no_img_src" alt="Step 2: Don't wait to Participate Ahhh...the school year finally started and there are clubs looking to grab my attention. The club organizers are yelling out loud so that all could hear if &quot;anyone is interested in the ___________ club.&quot; I'm not certain if I am interested in that club but it really doesn't hurt to try new things. They ask me to fill in my information such as my student number, student email, my full name, and etc. But then, it dawns on me that I have to do this tedious writing over and over again every time I find a club I might find interesting. That's where Cardigin's got my back. With the app, I can simply take a picture of the club's QR code and...VOILA! I'm signed up for the club with one pain free picture! Now these clubs that I signed up for are hosting these really cool and exciting events! What's even better is that the event plans to have a QR code unique to that event I plan on attending. What this means is that I can show my friends on Cardigin that I went and did some amazing things with my new friends I met in the school club. Not only that, I earned myself some Cardigin points that goes towards my personal experience level. My chances of winning cool prizes from Cardigin goes up as I level up! Since I'm level 28 now, I know I have a better chance of winning that gift card than those who are level 1 or level 27. " data-orig-src="images/u10474-82.png?crc=3766387742" data-image-width="879" data-orig-id="u10474-8" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+     <img class="colelem temp_no_id temp_no_img_src" alt="Step 3: The Graduation Before the Commencement The semester is finally over and Cardigin is now announcing the hardest working student across the country. I worked really hard and attended a lot of events so I hope the team at Cardigin recognizes it. I heard they're giving away a sweet prize for the winner." data-orig-src="images/u10475-72.png?crc=3957557912" data-image-width="879" data-orig-id="u10475-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+     <div class="clearfix colelem temp_no_id shared_content" data-orig-id="pu5934" data-content-guid="pu5934_content"><!-- group -->
+      <div class="clip_frame grpelem temp_no_id" data-sizePolicy="fluidWidthHeight" data-pintopage="page_fixedCenter" data-orig-id="u5934"><!-- svg -->
+       <img class="svg svg_mar temp_no_id temp_no_img_src" data-orig-src="images/safeandsecure.svg?crc=4283953555" onload="this.style.height=(this.offsetWidth*604/604)+'px'" alt="" data-mu-svgfallback="images/safeandsecure_poster_.png?crc=394338046" data-heightwidthratio="1" data-image-width="604" data-image-height="604" data-orig-id="u5930" src="images/blank.gif?crc=4208392903"/>
+      </div>
+      <span class="clearfix grpelem placeholder" data-placeholder-for="u5944-8_content"><!-- placeholder node --></span>
+     </div>
+     <img class="colelem temp_no_id temp_no_img_src" alt="We totally get that everyone is concerned about privacy and their security. User concerns are completely justified and companies should take responsibility especially when their costumers trusted them with valuable information. In the wake of some public breaches in the industry, it is clear that a technology companies such as ours need to take the proper steps necessary in order to protect our users and clients. We recognize the great responsibility of keeping our company ethical and, for the benefit of the brand and our shareholders, we will take every step to honour our users’ trust. The only way for our company to be reflected in a good light is to do right. So here's what we'll do a) Establish a Code of Ethics for individuals on the Cardigin team and the company in its entirety. b) Be completely transparent with how Cardigin uses each individuals data. c) Create a feedback forum to get customer input. d) Comply with and meet the highest legal standards for all our users. e) Set in place corporate deterrences and actions against unethical behaviour in the company. Because ethics are both personally and culturally defined, differences of opinion arise as to what is ethical or unethical. However, our definition of ethics is the prioritization of our users and their communities. We vow to prioritize our users’ safety and privacy before all else and protect their communities while doing so. Another possible obstacle is the collision between what is the law and what is ethical. It would be ideal to distance ourselves from such a situation but it would be irresponsible for our company to not have a plan of action for this scenario. In these cases, we will follow the law regardless of the social norms. However, Cardigin vows to stand up for our users while maintaining order by having discussions with state representatives and by providing advocates with a platform where they are able to express their themselves. " data-orig-src="images/u10723-292.png?crc=318153602" data-image-width="887" data-orig-id="u10723-29" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+    </div>
+    <div class="clearfix grpelem" id="pu102-4"><!-- group -->
+     <span class="placeholder" data-placeholder-for="u102-4_content"><!-- placeholder node --></span>
+     <nav class="MenuBar clearfix temp_no_id" data-orig-id="menuu205"><!-- horizontal box -->
+      <div class="MenuItemContainer clearfix grpelem temp_no_id" data-orig-id="u301"><!-- vertical box -->
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu MuseMenuActive clearfix colelem temp_no_id" href="index.html" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u304"><!-- horizontal box --><img class="MenuItemLabel NoWrap grpelem temp_no_id" alt="Organizations" src="images/blank.gif?crc=4208392903" data-orig-id="u307"/><!-- state-based BG images --></a>
+      </div>
+      <div class="MenuItemContainer clearfix grpelem temp_no_id" data-orig-id="u280"><!-- vertical box -->
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem temp_no_id" href="partner-access.html" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u283"><!-- horizontal box --><img class="MenuItemLabel NoWrap grpelem temp_no_id" alt="Partner Access" src="images/blank.gif?crc=4208392903" data-orig-id="u286"/><!-- state-based BG images --></a>
+      </div>
+     </nav>
+    </div>
+    <div class="verticalspacer" data-offset-top="11895" data-content-above-spacer="11895" data-content-below-spacer="62" data-sizePolicy="fixed" data-pintopage="page_fixedLeft"></div>
+    <span class="browser_width grpelem placeholder" data-placeholder-for="u10957-bw_content"><!-- placeholder node --></span>
+   </div>
+   <div class="preload_images">
+    <img class="preload temp_no_img_src" data-orig-src="images/u307-r.png?crc=4182398412" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u307-a.png?crc=4182398412" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u286-r.png?crc=480980739" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u286-a.png?crc=480980739" alt="" src="images/blank.gif?crc=4208392903"/>
+   </div>
+  </div>
+  <div class="breakpoint" id="bp_686" data-min-width="686" data-max-width="686"><!-- responsive breakpoint node -->
+   <div class="clearfix borderbox temp_no_id" data-orig-id="page"><!-- group -->
+    <div class="clearfix grpelem" id="paccordionu12944"><!-- column -->
+     <ul class="AccordionWidget musegain_absolute_preloader clearfix colelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fluidx" data-orig-id="accordionu12944"><!-- vertical box -->
+      <li class="AccordionPanel clearfix colelem temp_no_id" data-orig-id="u12945"><!-- vertical box --><div class="AccordionPanelTab clearfix colelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u12950-3"><!-- content --><span class="placeholder" data-placeholder-for="u12950-3_0_content"><!-- placeholder node --></span></div><div class="AccordionPanelContent clearfix colelem temp_no_id" data-orig-id="u12946"><!-- column --><span class="size_fixed colelem placeholder" data-placeholder-for="u12948_content"><!-- placeholder node --></span><span class="size_fixed colelem placeholder" data-placeholder-for="u12947_content"><!-- placeholder node --></span><span class="clearfix colelem placeholder" data-placeholder-for="u12949-4_content"><!-- placeholder node --></span></div></li>
+     </ul>
+     <span class="size_fixed colelem placeholder" data-placeholder-for="u13805_content"><!-- placeholder node --></span>
+    </div>
+    <span class="browser_width placeholder" data-placeholder-for="u94-bw_content"><!-- placeholder node --></span>
+    <div class="clearfix grpelem temp_no_id" data-orig-id="pu4560"><!-- column -->
+     <div class="clip_frame colelem temp_no_id shared_content" data-sizePolicy="fluidWidthHeight" data-pintopage="page_fixedCenter" data-orig-id="u4560" data-content-guid="u4560_content"><!-- image -->
+      <img class="block temp_no_id temp_no_img_src" data-orig-src="images/cardiginlogowbtight.png?crc=34989605" alt="" data-heightwidthratio="1.3095238095238095" data-image-width="84" data-image-height="110" data-orig-id="u4560_img" src="images/blank.gif?crc=4208392903"/>
+     </div>
+     <div class="clearfix colelem temp_no_id" data-orig-id="u7886"><!-- group -->
+      <img class="grpelem temp_no_id temp_no_img_src" alt="For Your Best School Year" width="177" height="60" data-orig-src="images/u5031-43.png?crc=3901391138" data-orig-id="u5031-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <span class="rounded-corners grpelem placeholder" data-placeholder-for="u5035_content"><!-- placeholder node --></span>
+     </div>
+     <div class="clearfix colelem temp_no_id" data-orig-id="pu8016"><!-- group -->
+      <div class="browser_width grpelem temp_no_id" data-orig-id="u8016-bw">
+       <div class="gradient temp_no_id" data-orig-id="u8016"><!-- column -->
+        <div class="clearfix temp_no_id" data-orig-id="u8016_align_to_page">
+         <div class="position_content temp_no_id" data-orig-id="u8016_position_content">
+          <div class="clip_frame colelem temp_no_id" data-sizePolicy="fluidWidthHeight" data-pintopage="page_fixedCenter" data-orig-id="u15616"><!-- image -->
+           <img class="block temp_no_id temp_no_img_src" data-orig-src="images/bettertoknow522x294.png?crc=54035400" alt="" data-heightwidthratio="0.5623800383877159" data-image-width="521" data-image-height="293" data-orig-id="u15616_img" src="images/blank.gif?crc=4208392903"/>
+          </div>
+          <div class="clearfix colelem temp_no_id" data-orig-id="pu7054-8"><!-- group -->
+           <img class="grpelem temp_no_id temp_no_img_src" alt="Power in Unity! Cardigin is a new platform designed specifically for post-secondary institutions. Our team strives to help these institutions who have an interest in unifying its community while also opening students to a wide range of opportunities and networks outside of their school. With Cardigin, we hope to provide our users and our close partners with an experience catered to their needs. " data-orig-src="images/u7054-83.png?crc=373862226" data-image-width="657" data-orig-id="u7054-8" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+           <img class="grpelem temp_no_id temp_no_img_src" alt="Growth in Numbers, together. The first aspect of our product is focused to primarily help organizers such as post-secondary institutions and student-run organizations. Our team at Cardigin has built a web based data aggregation tool with these organizers in mind. With Cardigin, organizers are able to see data specific for their needs. For instance, our tool is able to calculate how many students attended an event hosted at your school and take into consideration other factors that could've affected the attendance numbers. " data-orig-src="images/u7058-103.png?crc=3890993536" data-image-width="657" data-orig-id="u7058-10" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+          </div>
+          <img class="colelem temp_no_id temp_no_img_src" alt="Asking the right Questions? Do more students show up to an event when the weathers nice? Are students more active in their communities on a Wednesday? Our algorithm builds itself into something far more accurate further into the year. As we figure out better variables and equations, we can calculate for spurious data and unreliable correlations. Your work has a significant impact in your community so we understand the significance of giving our users the best possible experience through reliable and significant solutions." data-orig-src="images/u7064-73.png?crc=4147831972" data-image-width="657" data-orig-id="u7064-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+          <span class="clip_frame colelem placeholder" data-placeholder-for="u5223_content"><!-- placeholder node --></span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <span class="browser_width grpelem placeholder" data-placeholder-for="u7756-bw_content"><!-- placeholder node --></span>
+      <div class="browser_width grpelem temp_no_id" data-orig-id="u13802-bw">
+       <span class="size_browser_width placeholder" data-placeholder-for="u13802_content"><!-- placeholder node --></span>
+      </div>
+      <img class="grpelem temp_no_id temp_no_img_src" alt="Click on the image to scroll!" width="232" height="91" data-orig-src="images/u13944-43.png?crc=449892399" data-orig-id="u13944-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+     </div>
+     <span class="clearfix colelem placeholder" data-placeholder-for="u13841-4_content"><!-- placeholder node --></span>
+     <img class="colelem temp_no_id temp_no_img_src" alt="Hey Champ. Go for Gold! " width="276" height="122" data-orig-src="images/u5604-63.png?crc=4181934709" data-orig-id="u5604-6" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+     <span class="clip_frame colelem placeholder" data-placeholder-for="u5594_content"><!-- placeholder node --></span>
+     <div class="browser_width colelem temp_no_id" data-orig-id="u5876-bw">
+      <div class="gradient temp_no_id" data-orig-id="u5876"><!-- column -->
+       <div class="clearfix temp_no_id" data-orig-id="u5876_align_to_page">
+        <div class="position_content temp_no_id" data-orig-id="u5876_position_content">
+         <img class="colelem temp_no_id temp_no_img_src" alt="Gold for Greatness. Our team awards organizations which we believe have excelled in terms of management and organization through our product. We are proud to work on grants and medals that will be awarded to those student clubs who have grown tremendously throughout the school year and have been great examples of what is possible with Cardigin. " data-orig-src="images/u8602-73.png?crc=360052655" data-image-width="621" data-orig-id="u8602-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+         <img class="colelem temp_no_id temp_no_img_src" alt="Your New Title: Standout Student. The school recognizes the best of the best and so do we. We award students will prizes and titles for their hard work. We want to encourage your students to work to better your community and give them a platform to change the world. We also want your students to take advantage of the opportunities offered by your school and your community. Think of us as the people adding the sprinkles on a really nice sundae. " data-orig-src="images/u8603-83.png?crc=3844155831" data-image-width="621" data-orig-id="u8603-8" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+         <img class="colelem temp_no_id temp_no_img_src" alt="Awesome Possums of the World! You're awesome and the world should know. Not only do we recognize talent and hard work but we want to share it with the world. Cardigin is a platform where you can share your work to our growing community, regardless of where they are. We do this because we believe there are individuals who create things worth sharing with the rest of world. " data-orig-src="images/u8604-73.png?crc=4272590166" data-image-width="621" data-orig-id="u8604-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+         <div class="clip_frame colelem temp_no_id" data-sizePolicy="fluidWidthHeight" data-pintopage="page_fixedCenter" data-orig-id="u15004"><!-- image -->
+          <img class="block temp_no_id temp_no_img_src" data-orig-src="images/cardigincartoonexport905x509.png?crc=236864654" alt="" data-heightwidthratio="0.5630530973451328" data-image-width="904" data-image-height="509" data-orig-id="u15004_img" src="images/blank.gif?crc=4208392903"/>
+         </div>
+         <span class="clip_frame colelem placeholder" data-placeholder-for="u5884_content"><!-- placeholder node --></span>
+         <img class="colelem temp_no_id temp_no_img_src" alt="Experience to Socialize. Create new moments in life through experience. Socialize and share these new moments in a new chapter of your life. Students will be able to do various things regarding their life in college. First, students can shares images, videos, and text with followers from their school and users outside of their school but who also happens to have a Cardigin account. The content you upload helps out the student organizations you cherish too! Events and Organizations can add your relevant content to their collection to show other students what the experience is like in their group using the appropriate tags. " data-orig-src="images/u9235-73.png?crc=120281170" data-image-width="546" data-orig-id="u9235-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+         <img class="colelem temp_no_id temp_no_img_src" alt="Breaking the Ice. A Friend at a Time. Taking a huge leap into a new chapter of your life can be intimidating. Moving to a new school doesn't make it any easier. Cardigin gives freshmen students the opportunity to start interacting with their new community and better adapt to the new school environment. Cardigin will organize fun and interactive games that will connect students together. Have you ever been rewarded for making friends? Better get used to it with us!" data-orig-src="images/u9236-73.png?crc=364505691" data-image-width="546" data-orig-id="u9236-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+         <img class="colelem temp_no_id temp_no_img_src" alt="Cardigin Harmony: Digital and Real. We believe that the most useful Apps are the Apps that serve you in the real world. Our team, knowledgeable with the digital world, have profound moments where they figure out how to improve the real world. Simply put, Cardigin looks for the harmony between the digital and the real world. For instance, one core feature is the utilization of Quick Read codes (QR) and our close collaboration with you. Student’s, when signing up for an account, enter their student details which organizations (like a student clubs or student societies) generally need to keep track of their members. Students will be able to conveniently sign up for these organizations using our App at home or by taking a picture of an organization specific QR code generated by our team. Cardigin built in so many useful pictures, you're going to ask why you didn't have this sooner!" data-orig-src="images/u9237-73.png?crc=4196205187" data-image-width="546" data-orig-id="u9237-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+         <img class="colelem temp_no_id temp_no_img_src" alt="Centralized Experience in a Decentralized Environment. Woah. " width="531" height="147" data-orig-src="images/u5908-83.png?crc=15611454" data-orig-id="u5908-8" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+         <div class="clip_frame colelem temp_no_id" data-sizePolicy="fluidWidthHeight" data-pintopage="page_fixedCenter" data-orig-id="u13185"><!-- image -->
+          <img class="block temp_no_id temp_no_img_src" data-orig-src="images/spotlight483x483.png?crc=285395837" alt="" data-heightwidthratio="1" data-image-width="482" data-image-height="482" data-orig-id="u13185_img" src="images/blank.gif?crc=4208392903"/>
+         </div>
+         <img class="colelem temp_no_id temp_no_img_src" alt="It's getting Crowded... It seems like everyone and everything has an App. Organizations and institutions all build an App just to say they have an App. But whatever they build, often times, is awful. Sorry to be brutally honest. That's why Cardigin exist. We're here to flip that on its head so that our clients don't end up like the other guys (don't be like the others). We built something you can use and have a reason to use. It works well and it's fun! Give us a try and you'll soon agree with us that we got the recipe just right. " data-orig-src="images/u9393-73.png?crc=4183218035" data-image-width="590" data-orig-id="u9393-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+         <img class="colelem temp_no_id temp_no_img_src" alt="First and foremost; You're a Student. We get it, money is tight. Student Organizers don't have the budget to advertise their extravagant events. We want to do what we can to help you and your students so we're offering our services to you folks for free. In addition, we'll keep in touch to continue improving our product so that Cardigin works for you and not the other way around. " data-orig-src="images/u9394-73.png?crc=4029602587" data-image-width="590" data-orig-id="u9394-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+         <img class="colelem temp_no_id temp_no_img_src" alt="Removing the Clutter and the Mess. There's beauty in simplicity and cleanliness. We're here to organize your home. Because we know from the get-go which school each one of our users attend, we are able to build a centralized experience for both the student and the organizers. When a student club promotes an event on social media, the amount of publicity is limited to the number of times their event is shared by event coordinators or club members. In addition, those shares are really annoying especially if you don't care for them. Like, why do I (a student from Example University) care if my friend from high school is organizing a donut sale at Template University? Why do I even need to know that there is a donut sale at there? So Cardigin takes this into consideration and only show users events relevant to them." data-orig-src="images/u9395-73.png?crc=183989506" data-image-width="590" data-orig-id="u9395-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="clearfix colelem temp_no_id" data-orig-id="pu5916"><!-- group -->
+      <span class="clip_frame grpelem placeholder" data-placeholder-for="u5916_content"><!-- placeholder node --></span>
+      <span class="clearfix grpelem placeholder" data-placeholder-for="u5926-4_content"><!-- placeholder node --></span>
+     </div>
+     <img class="colelem temp_no_id temp_no_img_src" alt="Finish as Strong as you Started. We believe that a student will succeed if they start off really strong and stay motivated to continue working hard. Cardigin will be your motivation and your personal school trainer. We'll design a plan for the students so that they can focus on studying and staying active in their community. So here's our plan for students in three steps." data-orig-src="images/u10451-123.png?crc=3870280256" data-image-width="517" data-orig-id="u10451-12" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+     <img class="colelem temp_no_id temp_no_img_src" alt="Step 1: Start Strong Let's focus on the first year students who are being introduced to college life for the first time. Remember that feeling? A little anxious, nervous but excited at the same time? Afraid of losing old pals from high school and afraid that you might not be able to make new friends in college? Well, we have the perfect ice breaker. Exclusive to those students participating in their school orientation, students will be prompted to go around their school and start taking pictures of other student QR codes. Once these pictures are taken, the two students will be consider 'friends' on Cardigin. In addition, students will earn points for every 'friend' they make during the Orientation. These points can be used to win sweet prizes such as gift cards or... gift cards (still working on it). Is it weird to add strangers like this? Not at all! We believe this is the perfect way to start meeting people and a great conversation starter!" data-orig-src="images/u10473-73.png?crc=526097098" data-image-width="592" data-orig-id="u10473-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+     <img class="colelem temp_no_id temp_no_img_src" alt="Step 2: Don't wait to Participate Ahhh...the school year finally started and there are clubs looking to grab my attention. The club organizers are yelling out loud so that all could hear if &quot;anyone is interested in the ___________ club.&quot; I'm not certain if I am interested in that club but it really doesn't hurt to try new things. They ask me to fill in my information such as my student number, student email, my full name, and etc. But then, it dawns on me that I have to do this tedious writing over and over again every time I find a club I might find interesting. That's where Cardigin's got my back. With the app, I can simply take a picture of the club's QR code and...VOILA! I'm signed up for the club with one pain free picture! Now these clubs that I signed up for are hosting these really cool and exciting events! What's even better is that the event plans to have a QR code unique to that event I plan on attending. What this means is that I can show my friends on Cardigin that I went and did some amazing things with my new friends I met in the school club. Not only that, I earned myself some Cardigin points that goes towards my personal experience level. My chances of winning cool prizes from Cardigin goes up as I level up! Since I'm level 28 now, I know I have a better chance of winning that gift card than those who are level 1 or level 27. " data-orig-src="images/u10474-83.png?crc=442033871" data-image-width="589" data-orig-id="u10474-8" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+     <img class="colelem temp_no_id temp_no_img_src" alt="Step 3: The Graduation Before the Commencement The semester is finally over and Cardigin is now announcing the hardest working student across the country. I worked really hard and attended a lot of events so I hope the team at Cardigin recognizes it. I heard they're giving away a sweet prize for the winner." data-orig-src="images/u10475-73.png?crc=4198021396" data-image-width="589" data-orig-id="u10475-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+     <span class="clearfix colelem placeholder" data-placeholder-for="pu5934_content"><!-- placeholder node --></span>
+     <img class="colelem temp_no_id temp_no_img_src" alt="We totally get that everyone is concerned about privacy and their security. User concerns are completely justified and companies should take responsibility especially when their costumers trusted them with valuable information. In the wake of some public breaches in the industry, it is clear that a technology companies such as ours need to take the proper steps necessary in order to protect our users and clients. We recognize the great responsibility of keeping our company ethical and, for the benefit of the brand and our shareholders, we will take every step to honour our users’ trust. The only way for our company to be reflected in a good light is to do right. So here's what we'll do a) Establish a Code of Ethics for individuals on the Cardigin team and the company in its entirety. b) Be completely transparent with how Cardigin uses each individuals data. c) Create a feedback forum to get customer input. d) Comply with and meet the highest legal standards for all our users. e) Set in place corporate deterrences and actions against unethical behaviour in the company. Because ethics are both personally and culturally defined, differences of opinion arise as to what is ethical or unethical. However, our definition of ethics is the prioritization of our users and their communities. We vow to prioritize our users’ safety and privacy before all else and protect their communities while doing so. Another possible obstacle is the collision between what is the law and what is ethical. It would be ideal to distance ourselves from such a situation but it would be irresponsible for our company to not have a plan of action for this scenario. In these cases, we will follow the law regardless of the social norms. However, Cardigin vows to stand up for our users while maintaining order by having discussions with state representatives and by providing advocates with a platform where they are able to express their themselves. " data-orig-src="images/u10723-293.png?crc=361053541" data-image-width="594" data-orig-id="u10723-29" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+    </div>
+    <div class="clearfix grpelem temp_no_id" data-orig-id="pu102-4"><!-- group -->
+     <span class="placeholder" data-placeholder-for="u102-4_content"><!-- placeholder node --></span>
+     <nav class="MenuBar clearfix temp_no_id" data-orig-id="menuu205"><!-- horizontal box -->
+      <div class="MenuItemContainer clearfix grpelem temp_no_id" data-orig-id="u301"><!-- vertical box -->
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu MuseMenuActive clearfix colelem temp_no_id" href="index.html" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u304"><!-- horizontal box --><img class="MenuItemLabel NoWrap grpelem temp_no_id" alt="Organizations" src="images/blank.gif?crc=4208392903" data-orig-id="u307"/><!-- state-based BG images --></a>
+      </div>
+      <div class="MenuItemContainer clearfix grpelem temp_no_id" data-orig-id="u280"><!-- vertical box -->
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem temp_no_id" href="partner-access.html" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u283"><!-- horizontal box --><img class="MenuItemLabel NoWrap grpelem temp_no_id" alt="Partner Access" src="images/blank.gif?crc=4208392903" data-orig-id="u286"/><!-- state-based BG images --></a>
+      </div>
+     </nav>
+    </div>
+    <div class="verticalspacer" data-offset-top="11833" data-content-above-spacer="11833" data-content-below-spacer="61" data-sizePolicy="fixed" data-pintopage="page_fixedLeft"></div>
+    <span class="browser_width grpelem placeholder" data-placeholder-for="u10957-bw_content"><!-- placeholder node --></span>
+   </div>
+   <div class="preload_images">
+    <img class="preload temp_no_img_src" data-orig-src="images/u307-r.png?crc=4182398412" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u307-a.png?crc=4182398412" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u286-r.png?crc=480980739" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u286-a.png?crc=480980739" alt="" src="images/blank.gif?crc=4208392903"/>
+   </div>
+  </div>
+  <div class="breakpoint" id="bp_685" data-min-width="321" data-max-width="685"><!-- responsive breakpoint node -->
+   <div class="clearfix borderbox temp_no_id" data-orig-id="page"><!-- group -->
+    <div class="clearfix grpelem temp_no_id" data-orig-id="paccordionu12944"><!-- column -->
+     <ul class="AccordionWidget musegain_absolute_preloader clearfix colelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fluidx" data-orig-id="accordionu12944"><!-- vertical box -->
+      <li class="AccordionPanel clearfix colelem temp_no_id" data-orig-id="u12945"><!-- vertical box --><div class="AccordionPanelTab clearfix colelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u12950-3"><!-- content --><span class="placeholder" data-placeholder-for="u12950-3_0_content"><!-- placeholder node --></span></div><div class="AccordionPanelContent clearfix colelem temp_no_id" data-orig-id="u12946"><!-- column --><span class="size_fixed colelem placeholder" data-placeholder-for="u12948_content"><!-- placeholder node --></span><span class="size_fixed colelem placeholder" data-placeholder-for="u12947_content"><!-- placeholder node --></span><span class="clearfix colelem placeholder" data-placeholder-for="u12949-4_content"><!-- placeholder node --></span></div></li>
+     </ul>
+     <span class="size_fixed colelem placeholder" data-placeholder-for="u13805_content"><!-- placeholder node --></span>
+    </div>
+    <div class="clearfix grpelem" id="paccordionu1863"><!-- column -->
+     <div class="browser_width colelem" id="accordionu1863-bw">
+      <ul class="AccordionWidget clearfix" id="accordionu1863"><!-- vertical box -->
+       <li class="AccordionPanel clearfix colelem100" id="u1915"><!-- vertical box --><div class="AccordionPanelTab clearfix colelem100" id="u1916-3"><!-- content --><div id="u1916-2" class="shared_content" data-content-guid="u1916-2_content"><p>&nbsp;</p></div></div><div class="AccordionPanelContent rounded-corners clearfix colelem100" id="u1917"><!-- group --><nav class="MenuBar clearfix grpelem" id="menuu1974"><!-- vertical box --><div class="MenuItemContainer clearfix colelem" id="u3745"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu MuseMenuActive borderbox clearfix grpelem" id="u3746" href="index.html"><!-- horizontal box --><div class="MenuItemLabel grpelem" id="u3747"><!-- state-based BG images --><img alt="Organizations" src="images/blank.gif?crc=4208392903"/><div class="fluid_height_spacer"></div></div></a></div><div class="MenuItemContainer clearfix colelem" id="u3794"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu borderbox clearfix grpelem" id="u3795" href="partner-access.html"><!-- horizontal box --><div class="MenuItemLabel grpelem" id="u3796"><!-- state-based BG images --><img alt="Partner Access" src="images/blank.gif?crc=4208392903"/><div class="fluid_height_spacer"></div></div></a></div></nav></div></li>
+      </ul>
+     </div>
+     <span class="clip_frame colelem placeholder" data-placeholder-for="u4560_content"><!-- placeholder node --></span>
+     <div class="clearfix colelem temp_no_id" data-orig-id="u7886"><!-- group -->
+      <img class="grpelem temp_no_id temp_no_img_src" alt="For Your Best School Year" width="177" height="60" data-orig-src="images/u5031-44.png?crc=3901391138" data-orig-id="u5031-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <span class="rounded-corners grpelem placeholder" data-placeholder-for="u5035_content"><!-- placeholder node --></span>
+     </div>
+     <div class="clearfix colelem temp_no_id" data-orig-id="pu8016"><!-- group -->
+      <div class="browser_width grpelem temp_no_id" data-orig-id="u8016-bw">
+       <div class="gradient temp_no_id" data-orig-id="u8016"><!-- column -->
+        <div class="clearfix temp_no_id" data-orig-id="u8016_align_to_page">
+         <div class="position_content temp_no_id" data-orig-id="u8016_position_content">
+          <div class="clip_frame colelem temp_no_id" data-sizePolicy="fluidWidthHeight" data-pintopage="page_fixedCenter" data-orig-id="u15616"><!-- image -->
+           <img class="block temp_no_id temp_no_img_src" data-orig-src="images/bettertoknow521x293.png?crc=54035400" alt="" data-heightwidthratio="0.5623800383877159" data-image-width="521" data-image-height="293" data-orig-id="u15616_img" src="images/blank.gif?crc=4208392903"/>
+          </div>
+          <div class="clearfix colelem temp_no_id" data-orig-id="pu7054-8"><!-- group -->
+           <img class="grpelem temp_no_id temp_no_img_src" alt="Power in Unity! Cardigin is a new platform designed specifically for post-secondary institutions. Our team strives to help these institutions who have an interest in unifying its community while also opening students to a wide range of opportunities and networks outside of their school. With Cardigin, we hope to provide our users and our close partners with an experience catered to their needs. " data-orig-src="images/u7054-84.png?crc=4184362193" data-image-width="656" data-orig-id="u7054-8" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+           <img class="grpelem temp_no_id temp_no_img_src" alt="Growth in Numbers, together. The first aspect of our product is focused to primarily help organizers such as post-secondary institutions and student-run organizations. Our team at Cardigin has built a web based data aggregation tool with these organizers in mind. With Cardigin, organizers are able to see data specific for their needs. For instance, our tool is able to calculate how many students attended an event hosted at your school and take into consideration other factors that could've affected the attendance numbers. " data-orig-src="images/u7058-104.png?crc=4083799887" data-image-width="656" data-orig-id="u7058-10" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+          </div>
+          <img class="colelem temp_no_id temp_no_img_src" alt="Asking the right Questions? Do more students show up to an event when the weathers nice? Are students more active in their communities on a Wednesday? Our algorithm builds itself into something far more accurate further into the year. As we figure out better variables and equations, we can calculate for spurious data and unreliable correlations. Your work has a significant impact in your community so we understand the significance of giving our users the best possible experience through reliable and significant solutions." data-orig-src="images/u7064-74.png?crc=3852003856" data-image-width="656" data-orig-id="u7064-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+          <span class="clip_frame colelem placeholder" data-placeholder-for="u5223_content"><!-- placeholder node --></span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <span class="browser_width grpelem placeholder" data-placeholder-for="u7756-bw_content"><!-- placeholder node --></span>
+      <div class="browser_width grpelem temp_no_id" data-orig-id="u13802-bw">
+       <span class="size_browser_width placeholder" data-placeholder-for="u13802_content"><!-- placeholder node --></span>
+      </div>
+      <img class="grpelem temp_no_id temp_no_img_src" alt="Click on the image to scroll!" width="232" height="91" data-orig-src="images/u13944-44.png?crc=449892399" data-orig-id="u13944-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+     </div>
+     <span class="clearfix colelem placeholder" data-placeholder-for="u13841-4_content"><!-- placeholder node --></span>
+     <img class="colelem temp_no_id temp_no_img_src" alt="Hey Champ. Go for Gold! " width="276" height="122" data-orig-src="images/u5604-64.png?crc=4181934709" data-orig-id="u5604-6" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+     <div class="clip_frame colelem temp_no_id" data-sizePolicy="fluidWidthHeight" data-pintopage="page_fixedCenter" data-orig-id="u5594"><!-- svg -->
+      <img class="svg svg_mar temp_no_id temp_no_img_src" data-orig-src="images/artboard-1.svg?crc=4250357604" onload="this.style.height=(this.offsetWidth*474.2822265625/474.2822265625)+'px'" alt="" data-mu-svgfallback="images/artboard%201_poster_.png?crc=4040108897" data-heightwidthratio="1" data-image-width="474" data-image-height="474" data-orig-id="u5590" src="images/blank.gif?crc=4208392903"/>
+     </div>
+     <div class="browser_width colelem temp_no_id" data-orig-id="u5876-bw">
+      <div class="gradient temp_no_id" data-orig-id="u5876"><!-- column -->
+       <div class="clearfix temp_no_id" data-orig-id="u5876_align_to_page">
+        <div class="position_content temp_no_id" data-orig-id="u5876_position_content">
+         <img class="colelem temp_no_id temp_no_img_src" alt="Gold for Greatness. Our team awards organizations which we believe have excelled in terms of management and organization through our product. We are proud to work on grants and medals that will be awarded to those student clubs who have grown tremendously throughout the school year and have been great examples of what is possible with Cardigin. " data-orig-src="images/u8602-74.png?crc=4228213175" data-image-width="620" data-orig-id="u8602-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+         <img class="colelem temp_no_id temp_no_img_src" alt="Your New Title: Standout Student. The school recognizes the best of the best and so do we. We award students will prizes and titles for their hard work. We want to encourage your students to work to better your community and give them a platform to change the world. We also want your students to take advantage of the opportunities offered by your school and your community. Think of us as the people adding the sprinkles on a really nice sundae. " data-orig-src="images/u8603-84.png?crc=4087125606" data-image-width="620" data-orig-id="u8603-8" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+         <img class="colelem temp_no_id temp_no_img_src" alt="Awesome Possums of the World! You're awesome and the world should know. Not only do we recognize talent and hard work but we want to share it with the world. Cardigin is a platform where you can share your work to our growing community, regardless of where they are. We do this because we believe there are individuals who create things worth sharing with the rest of world. " data-orig-src="images/u8604-74.png?crc=4003504715" data-image-width="620" data-orig-id="u8604-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+         <div class="clip_frame colelem temp_no_id" data-sizePolicy="fluidWidthHeight" data-pintopage="page_fixedCenter" data-orig-id="u15004"><!-- image -->
+          <img class="block temp_no_id temp_no_img_src" data-orig-src="images/cardigincartoonexport904x508.png?crc=493886742" alt="" data-heightwidthratio="0.5625692137320044" data-image-width="903" data-image-height="508" data-orig-id="u15004_img" src="images/blank.gif?crc=4208392903"/>
+         </div>
+         <div class="clip_frame colelem temp_no_id" data-sizePolicy="fluidWidthHeight" data-pintopage="page_fixedCenter" data-orig-id="u5884"><!-- svg -->
+          <img class="svg svg_mar temp_no_id temp_no_img_src" data-orig-src="images/theresanappforthat.svg?crc=3990976054" onload="this.style.height=(this.offsetWidth*481.640625/481.64062500000006)+'px'" alt="" data-mu-svgfallback="images/theresanappforthat_poster_.png?crc=103922060" data-heightwidthratio="1" data-image-width="482" data-image-height="482" data-orig-id="u5880" src="images/blank.gif?crc=4208392903"/>
+         </div>
+         <img class="colelem temp_no_id temp_no_img_src" alt="Experience to Socialize. Create new moments in life through experience. Socialize and share these new moments in a new chapter of your life. Students will be able to do various things regarding their life in college. First, students can shares images, videos, and text with followers from their school and users outside of their school but who also happens to have a Cardigin account. The content you upload helps out the student organizations you cherish too! Events and Organizations can add your relevant content to their collection to show other students what the experience is like in their group using the appropriate tags. " data-orig-src="images/u9235-74.png?crc=3852076108" data-image-width="546" data-orig-id="u9235-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+         <img class="colelem temp_no_id temp_no_img_src" alt="Breaking the Ice. A Friend at a Time. Taking a huge leap into a new chapter of your life can be intimidating. Moving to a new school doesn't make it any easier. Cardigin gives freshmen students the opportunity to start interacting with their new community and better adapt to the new school environment. Cardigin will organize fun and interactive games that will connect students together. Have you ever been rewarded for making friends? Better get used to it with us!" data-orig-src="images/u9236-74.png?crc=3848564837" data-image-width="546" data-orig-id="u9236-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+         <img class="colelem temp_no_id temp_no_img_src" alt="Cardigin Harmony: Digital and Real. We believe that the most useful Apps are the Apps that serve you in the real world. Our team, knowledgeable with the digital world, have profound moments where they figure out how to improve the real world. Simply put, Cardigin looks for the harmony between the digital and the real world. For instance, one core feature is the utilization of Quick Read codes (QR) and our close collaboration with you. Student’s, when signing up for an account, enter their student details which organizations (like a student clubs or student societies) generally need to keep track of their members. Students will be able to conveniently sign up for these organizations using our App at home or by taking a picture of an organization specific QR code generated by our team. Cardigin built in so many useful pictures, you're going to ask why you didn't have this sooner!" data-orig-src="images/u9237-74.png?crc=248808761" data-image-width="546" data-orig-id="u9237-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+         <img class="colelem temp_no_id temp_no_img_src" alt="Centralized Experience in a Decentralized Environment. Woah. " width="531" height="147" data-orig-src="images/u5908-84.png?crc=15611454" data-orig-id="u5908-8" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+         <div class="clip_frame colelem temp_no_id" data-sizePolicy="fluidWidthHeight" data-pintopage="page_fixedCenter" data-orig-id="u13185"><!-- image -->
+          <img class="block temp_no_id temp_no_img_src" data-orig-src="images/spotlight482x482.png?crc=285395837" alt="" data-heightwidthratio="1" data-image-width="482" data-image-height="482" data-orig-id="u13185_img" src="images/blank.gif?crc=4208392903"/>
+         </div>
+         <img class="colelem temp_no_id temp_no_img_src" alt="It's getting Crowded... It seems like everyone and everything has an App. Organizations and institutions all build an App just to say they have an App. But whatever they build, often times, is awful. Sorry to be brutally honest. That's why Cardigin exist. We're here to flip that on its head so that our clients don't end up like the other guys (don't be like the others). We built something you can use and have a reason to use. It works well and it's fun! Give us a try and you'll soon agree with us that we got the recipe just right. " data-orig-src="images/u9393-74.png?crc=336169924" data-image-width="589" data-orig-id="u9393-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+         <img class="colelem temp_no_id temp_no_img_src" alt="First and foremost; You're a Student. We get it, money is tight. Student Organizers don't have the budget to advertise their extravagant events. We want to do what we can to help you and your students so we're offering our services to you folks for free. In addition, we'll keep in touch to continue improving our product so that Cardigin works for you and not the other way around. " data-orig-src="images/u9394-74.png?crc=382645943" data-image-width="589" data-orig-id="u9394-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+         <img class="colelem temp_no_id temp_no_img_src" alt="Removing the Clutter and the Mess. There's beauty in simplicity and cleanliness. We're here to organize your home. Because we know from the get-go which school each one of our users attend, we are able to build a centralized experience for both the student and the organizers. When a student club promotes an event on social media, the amount of publicity is limited to the number of times their event is shared by event coordinators or club members. In addition, those shares are really annoying especially if you don't care for them. Like, why do I (a student from Example University) care if my friend from high school is organizing a donut sale at Template University? Why do I even need to know that there is a donut sale at there? So Cardigin takes this into consideration and only show users events relevant to them." data-orig-src="images/u9395-74.png?crc=324708272" data-image-width="589" data-orig-id="u9395-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="clearfix colelem temp_no_id" data-orig-id="pu5916"><!-- group -->
+      <div class="clip_frame grpelem temp_no_id" data-sizePolicy="fluidWidthHeight" data-pintopage="page_fixedLeft" data-orig-id="u5916"><!-- svg -->
+       <img class="svg svg_mar temp_no_id temp_no_img_src" data-orig-src="images/bubbly.svg?crc=4273290824" onload="this.style.height=(this.offsetWidth*481.640625/481.640625)+'px'" alt="" data-mu-svgfallback="images/bubbly_poster_.png?crc=125940332" data-heightwidthratio="1" data-image-width="482" data-image-height="482" data-orig-id="u5912" src="images/blank.gif?crc=4208392903"/>
+      </div>
+      <span class="clearfix grpelem placeholder" data-placeholder-for="u5926-4_content"><!-- placeholder node --></span>
+     </div>
+     <img class="colelem temp_no_id temp_no_img_src" alt="Finish as Strong as you Started. We believe that a student will succeed if they start off really strong and stay motivated to continue working hard. Cardigin will be your motivation and your personal school trainer. We'll design a plan for the students so that they can focus on studying and staying active in their community. So here's our plan for students in three steps." data-orig-src="images/u10451-124.png?crc=3812803481" data-image-width="517" data-orig-id="u10451-12" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+     <img class="colelem temp_no_id temp_no_img_src" alt="Step 1: Start Strong Let's focus on the first year students who are being introduced to college life for the first time. Remember that feeling? A little anxious, nervous but excited at the same time? Afraid of losing old pals from high school and afraid that you might not be able to make new friends in college? Well, we have the perfect ice breaker. Exclusive to those students participating in their school orientation, students will be prompted to go around their school and start taking pictures of other student QR codes. Once these pictures are taken, the two students will be consider 'friends' on Cardigin. In addition, students will earn points for every 'friend' they make during the Orientation. These points can be used to win sweet prizes such as gift cards or... gift cards (still working on it). Is it weird to add strangers like this? Not at all! We believe this is the perfect way to start meeting people and a great conversation starter!" data-orig-src="images/u10473-74.png?crc=530050424" data-image-width="592" data-orig-id="u10473-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+     <img class="colelem temp_no_id temp_no_img_src" alt="Step 2: Don't wait to Participate Ahhh...the school year finally started and there are clubs looking to grab my attention. The club organizers are yelling out loud so that all could hear if &quot;anyone is interested in the ___________ club.&quot; I'm not certain if I am interested in that club but it really doesn't hurt to try new things. They ask me to fill in my information such as my student number, student email, my full name, and etc. But then, it dawns on me that I have to do this tedious writing over and over again every time I find a club I might find interesting. That's where Cardigin's got my back. With the app, I can simply take a picture of the club's QR code and...VOILA! I'm signed up for the club with one pain free picture! Now these clubs that I signed up for are hosting these really cool and exciting events! What's even better is that the event plans to have a QR code unique to that event I plan on attending. What this means is that I can show my friends on Cardigin that I went and did some amazing things with my new friends I met in the school club. Not only that, I earned myself some Cardigin points that goes towards my personal experience level. My chances of winning cool prizes from Cardigin goes up as I level up! Since I'm level 28 now, I know I have a better chance of winning that gift card than those who are level 1 or level 27. " data-orig-src="images/u10474-84.png?crc=3924386402" data-image-width="588" data-orig-id="u10474-8" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+     <img class="colelem temp_no_id temp_no_img_src" alt="Step 3: The Graduation Before the Commencement The semester is finally over and Cardigin is now announcing the hardest working student across the country. I worked really hard and attended a lot of events so I hope the team at Cardigin recognizes it. I heard they're giving away a sweet prize for the winner." data-orig-src="images/u10475-74.png?crc=3809075888" data-image-width="588" data-orig-id="u10475-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+     <div class="clearfix colelem temp_no_id" data-orig-id="pu5934"><!-- group -->
+      <div class="clip_frame grpelem temp_no_id" data-sizePolicy="fluidWidthHeight" data-pintopage="page_fixedCenter" data-orig-id="u5934"><!-- svg -->
+       <img class="svg svg_mar temp_no_id temp_no_img_src" data-orig-src="images/safeandsecure.svg?crc=4283953555" onload="this.style.height=(this.offsetWidth*404.04296875/404.04296875)+'px'" alt="" data-mu-svgfallback="images/safeandsecure_poster_.png?crc=394338046" data-heightwidthratio="1" data-image-width="404" data-image-height="404" data-orig-id="u5930" src="images/blank.gif?crc=4208392903"/>
+      </div>
+      <span class="clearfix grpelem placeholder" data-placeholder-for="u5944-8_content"><!-- placeholder node --></span>
+     </div>
+     <img class="colelem temp_no_id temp_no_img_src" alt="We totally get that everyone is concerned about privacy and their security. User concerns are completely justified and companies should take responsibility especially when their costumers trusted them with valuable information. In the wake of some public breaches in the industry, it is clear that a technology companies such as ours need to take the proper steps necessary in order to protect our users and clients. We recognize the great responsibility of keeping our company ethical and, for the benefit of the brand and our shareholders, we will take every step to honour our users’ trust. The only way for our company to be reflected in a good light is to do right. So here's what we'll do a) Establish a Code of Ethics for individuals on the Cardigin team and the company in its entirety. b) Be completely transparent with how Cardigin uses each individuals data. c) Create a feedback forum to get customer input. d) Comply with and meet the highest legal standards for all our users. e) Set in place corporate deterrences and actions against unethical behaviour in the company. Because ethics are both personally and culturally defined, differences of opinion arise as to what is ethical or unethical. However, our definition of ethics is the prioritization of our users and their communities. We vow to prioritize our users’ safety and privacy before all else and protect their communities while doing so. Another possible obstacle is the collision between what is the law and what is ethical. It would be ideal to distance ourselves from such a situation but it would be irresponsible for our company to not have a plan of action for this scenario. In these cases, we will follow the law regardless of the social norms. However, Cardigin vows to stand up for our users while maintaining order by having discussions with state representatives and by providing advocates with a platform where they are able to express their themselves. " data-orig-src="images/u10723-294.png?crc=3818434552" data-image-width="593" data-orig-id="u10723-29" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+    </div>
+    <div class="clearfix grpelem temp_no_id shared_content" data-orig-id="pu94" data-content-guid="pu94_content"><!-- group -->
+     <span class="browser_width placeholder" data-placeholder-for="u94-bw_content"><!-- placeholder node --></span>
+     <div class="clearfix" id="u1090"><!-- group -->
+      <div class="rounded-corners" id="u1074"><!-- simple frame --></div>
+      <div class="rounded-corners" id="u1079"><!-- simple frame --></div>
+      <div class="rounded-corners" id="u1084"><!-- simple frame --></div>
+     </div>
+     <img class="temp_no_id temp_no_img_src" alt="Cardigin" width="72" height="25" data-orig-src="images/u102-4.png?crc=4192707660" data-orig-id="u102-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+    </div>
+    <div class="verticalspacer" data-offset-top="11831" data-content-above-spacer="11831" data-content-below-spacer="61" data-sizePolicy="fixed" data-pintopage="page_fixedLeft"></div>
+    <span class="browser_width grpelem placeholder" data-placeholder-for="u10957-bw_content"><!-- placeholder node --></span>
+   </div>
+   <div class="preload_images">
+    <img class="preload temp_no_img_src" data-orig-src="images/u3747-r.png?crc=278455054" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u3747-a.png?crc=278455054" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u3796-r.png?crc=388244965" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u3796-a.png?crc=388244965" alt="" src="images/blank.gif?crc=4208392903"/>
+   </div>
+  </div>
+  <div class="breakpoint" id="bp_320" data-max-width="320"><!-- responsive breakpoint node -->
+   <div class="clearfix borderbox temp_no_id" data-orig-id="page"><!-- group -->
+    <div class="clearfix grpelem temp_no_id" data-orig-id="paccordionu1863"><!-- column -->
+     <div class="browser_width colelem temp_no_id" data-orig-id="accordionu1863-bw">
+      <ul class="AccordionWidget clearfix temp_no_id" data-orig-id="accordionu1863"><!-- vertical box -->
+       <li class="AccordionPanel clearfix colelem100 temp_no_id" data-orig-id="u1915"><!-- vertical box --><div class="AccordionPanelTab clearfix colelem100 temp_no_id" data-orig-id="u1916-3"><!-- content --><span class="placeholder" data-placeholder-for="u1916-2_content"><!-- placeholder node --></span></div><div class="AccordionPanelContent rounded-corners clearfix colelem100 temp_no_id" data-orig-id="u1917"><!-- group --><nav class="MenuBar clearfix grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="menuu1974"><!-- vertical box --><div class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u3745"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu MuseMenuActive clearfix grpelem temp_no_id" href="index.html" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u3746"><!-- horizontal box --><img class="MenuItemLabel grpelem temp_no_id" alt="Organizations" src="images/blank.gif?crc=4208392903" data-orig-id="u3747"/><!-- state-based BG images --></a></div><div class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u3794"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="partner-access.html" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u3795"><!-- horizontal box --><img class="MenuItemLabel grpelem temp_no_id" alt="Partner Access" src="images/blank.gif?crc=4208392903" data-orig-id="u3796"/><!-- state-based BG images --></a></div></nav></div></li>
+      </ul>
+     </div>
+     <div class="clip_frame colelem temp_no_id" data-sizePolicy="fluidWidthHeight" data-pintopage="page_fixedCenter" data-orig-id="u4560"><!-- image -->
+      <img class="block temp_no_id temp_no_img_src" data-orig-src="images/cardiginlogowbtight.png?crc=34989605" alt="" data-heightwidthratio="1.3076923076923077" data-image-width="39" data-image-height="51" data-orig-id="u4560_img" src="images/blank.gif?crc=4208392903"/>
+     </div>
+     <div class="clearfix colelem temp_no_id" data-orig-id="u7886"><!-- group -->
+      <img class="grpelem temp_no_id temp_no_img_src" alt="For Your Best School Year" width="177" height="60" data-orig-src="images/u5031-45.png?crc=3901391138" data-orig-id="u5031-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <span class="rounded-corners grpelem placeholder" data-placeholder-for="u5035_content"><!-- placeholder node --></span>
+     </div>
+     <div class="clearfix colelem temp_no_id" data-orig-id="pu8016"><!-- group -->
+      <div class="browser_width grpelem temp_no_id" data-orig-id="u8016-bw">
+       <div class="gradient temp_no_id" data-orig-id="u8016"><!-- column -->
+        <div class="clearfix temp_no_id" data-orig-id="u8016_align_to_page">
+         <div class="position_content temp_no_id" data-orig-id="u8016_position_content">
+          <div class="clearfix colelem temp_no_id" data-orig-id="pu7054-8"><!-- group -->
+           <img class="grpelem temp_no_id temp_no_img_src" alt="Power in Unity! Cardigin is a new platform designed specifically for post-secondary institutions. Our team strives to help these institutions who have an interest in unifying its community while also opening students to a wide range of opportunities and networks outside of their school. With Cardigin, we hope to provide our users and our close partners with an experience catered to their needs. " data-orig-src="images/u7054-85.png?crc=510217710" data-image-width="306" data-orig-id="u7054-8" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+           <img class="grpelem temp_no_id temp_no_img_src" alt="Growth in Numbers, together. The first aspect of our product is focused to primarily help organizers such as post-secondary institutions and student-run organizations. Our team at Cardigin has built a web based data aggregation tool with these organizers in mind. With Cardigin, organizers are able to see data specific for their needs. For instance, our tool is able to calculate how many students attended an event hosted at your school and take into consideration other factors that could've affected the attendance numbers. " data-orig-src="images/u7058-105.png?crc=4234009674" data-image-width="306" data-orig-id="u7058-10" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+          </div>
+          <img class="colelem temp_no_id temp_no_img_src" alt="Asking the right Questions? Do more students show up to an event when the weathers nice? Are students more active in their communities on a Wednesday? Our algorithm builds itself into something far more accurate further into the year. As we figure out better variables and equations, we can calculate for spurious data and unreliable correlations. Your work has a significant impact in your community so we understand the significance of giving our users the best possible experience through reliable and significant solutions." data-orig-src="images/u7064-75.png?crc=4270957813" data-image-width="306" data-orig-id="u7064-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+          <span class="clip_frame colelem placeholder" data-placeholder-for="u5223_content"><!-- placeholder node --></span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <span class="browser_width grpelem placeholder" data-placeholder-for="u7756-bw_content"><!-- placeholder node --></span>
+      <ul class="AccordionWidget musegain_absolute_preloader clearfix grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fluidx" data-orig-id="accordionu12944"><!-- vertical box -->
+       <li class="AccordionPanel clearfix colelem temp_no_id" data-orig-id="u12945"><!-- vertical box --><div class="AccordionPanelTab clearfix colelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u12950-3"><!-- content --><span class="placeholder" data-placeholder-for="u12950-3_0_content"><!-- placeholder node --></span></div><div class="AccordionPanelContent clearfix colelem temp_no_id" data-orig-id="u12946"><!-- column --><span class="size_fixed colelem placeholder" data-placeholder-for="u12948_content"><!-- placeholder node --></span><span class="size_fixed colelem placeholder" data-placeholder-for="u12947_content"><!-- placeholder node --></span><span class="clearfix colelem placeholder" data-placeholder-for="u12949-4_content"><!-- placeholder node --></span></div></li>
+      </ul>
+      <div class="browser_width grpelem temp_no_id" data-orig-id="u13802-bw">
+       <span class="size_browser_width placeholder" data-placeholder-for="u13802_content"><!-- placeholder node --></span>
+      </div>
+      <img class="grpelem temp_no_id temp_no_img_src" alt="Click on the image to scroll!" width="232" height="91" data-orig-src="images/u13944-45.png?crc=449892399" data-orig-id="u13944-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <div class="clip_frame grpelem temp_no_id" data-sizePolicy="fluidWidthHeight" data-pintopage="page_fixedCenter" data-orig-id="u15616"><!-- image -->
+       <img class="block temp_no_id temp_no_img_src" data-orig-src="images/bettertoknow244x137.png?crc=395968687" alt="" data-heightwidthratio="0.5637860082304527" data-image-width="243" data-image-height="137" data-orig-id="u15616_img" src="images/blank.gif?crc=4208392903"/>
+      </div>
+     </div>
+     <span class="clearfix colelem placeholder" data-placeholder-for="u13841-4_content"><!-- placeholder node --></span>
+     <div class="clearfix colelem" id="pu13805"><!-- group -->
+      <span class="size_fixed grpelem placeholder" data-placeholder-for="u13805_content"><!-- placeholder node --></span>
+      <img class="grpelem temp_no_id temp_no_img_src" alt="Hey Champ. Go for Gold! " width="276" height="122" data-orig-src="images/u5604-65.png?crc=4181934709" data-orig-id="u5604-6" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+     </div>
+     <div class="clip_frame colelem temp_no_id" data-sizePolicy="fluidWidthHeight" data-pintopage="page_fixedCenter" data-orig-id="u5594"><!-- svg -->
+      <img class="svg svg_mar temp_no_id temp_no_img_src" data-orig-src="images/artboard-1.svg?crc=4250357604" onload="this.style.height=(this.offsetWidth*221.5625/221.5625)+'px'" alt="" data-mu-svgfallback="images/artboard%201_poster_.png?crc=4040108897" data-heightwidthratio="1" data-image-width="222" data-image-height="222" data-orig-id="u5590" src="images/blank.gif?crc=4208392903"/>
+     </div>
+     <div class="browser_width colelem temp_no_id" data-orig-id="u5876-bw">
+      <div class="gradient temp_no_id" data-orig-id="u5876"><!-- column -->
+       <div class="clearfix temp_no_id" data-orig-id="u5876_align_to_page">
+        <div class="position_content temp_no_id" data-orig-id="u5876_position_content">
+         <img class="colelem temp_no_id temp_no_img_src" alt="Gold for Greatness. Our team awards organizations which we believe have excelled in terms of management and organization through our product. We are proud to work on grants and medals that will be awarded to those student clubs who have grown tremendously throughout the school year and have been great examples of what is possible with Cardigin. " data-orig-src="images/u8602-75.png?crc=14980949" data-image-width="290" data-orig-id="u8602-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+         <img class="colelem temp_no_id temp_no_img_src" alt="Your New Title: Standout Student. The school recognizes the best of the best and so do we. We award students will prizes and titles for their hard work. We want to encourage your students to work to better your community and give them a platform to change the world. We also want your students to take advantage of the opportunities offered by your school and your community. Think of us as the people adding the sprinkles on a really nice sundae. " data-orig-src="images/u8603-85.png?crc=4232913285" data-image-width="290" data-orig-id="u8603-8" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+         <img class="colelem temp_no_id temp_no_img_src" alt="Awesome Possums of the World! You're awesome and the world should know. Not only do we recognize talent and hard work but we want to share it with the world. Cardigin is a platform where you can share your work to our growing community, regardless of where they are. We do this because we believe there are individuals who create things worth sharing with the rest of world. " data-orig-src="images/u8604-75.png?crc=3844910514" data-image-width="290" data-orig-id="u8604-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+         <div class="clip_frame colelem temp_no_id" data-sizePolicy="fluidWidthHeight" data-pintopage="page_fixedCenter" data-orig-id="u15004"><!-- image -->
+          <img class="block temp_no_id temp_no_img_src" data-orig-src="images/cardigincartoonexport422x238.png?crc=4256630180" alt="" data-heightwidthratio="0.5616113744075829" data-image-width="422" data-image-height="237" data-orig-id="u15004_img" src="images/blank.gif?crc=4208392903"/>
+         </div>
+         <div class="clip_frame colelem temp_no_id" data-sizePolicy="fluidWidthHeight" data-pintopage="page_fixedCenter" data-orig-id="u5884"><!-- svg -->
+          <img class="svg svg_mar temp_no_id temp_no_img_src" data-orig-src="images/theresanappforthat.svg?crc=3990976054" onload="this.style.height=(this.offsetWidth*225/225)+'px'" alt="" data-mu-svgfallback="images/theresanappforthat_poster_.png?crc=103922060" data-heightwidthratio="1" data-image-width="225" data-image-height="225" data-orig-id="u5880" src="images/blank.gif?crc=4208392903"/>
+         </div>
+         <img class="colelem temp_no_id temp_no_img_src" alt="Experience to Socialize. Create new moments in life through experience. Socialize and share these new moments in a new chapter of your life. Students will be able to do various things regarding their life in college. First, students can shares images, videos, and text with followers from their school and users outside of their school but who also happens to have a Cardigin account. The content you upload helps out the student organizations you cherish too! Events and Organizations can add your relevant content to their collection to show other students what the experience is like in their group using the appropriate tags. " data-orig-src="images/u9235-75.png?crc=3815682884" data-image-width="255" data-orig-id="u9235-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+         <img class="colelem temp_no_id temp_no_img_src" alt="Breaking the Ice. A Friend at a Time. Taking a huge leap into a new chapter of your life can be intimidating. Moving to a new school doesn't make it any easier. Cardigin gives freshmen students the opportunity to start interacting with their new community and better adapt to the new school environment. Cardigin will organize fun and interactive games that will connect students together. Have you ever been rewarded for making friends? Better get used to it with us!" data-orig-src="images/u9236-75.png?crc=3966442784" data-image-width="255" data-orig-id="u9236-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+         <img class="colelem temp_no_id temp_no_img_src" alt="Cardigin Harmony: Digital and Real. We believe that the most useful Apps are the Apps that serve you in the real world. Our team, knowledgeable with the digital world, have profound moments where they figure out how to improve the real world. Simply put, Cardigin looks for the harmony between the digital and the real world. For instance, one core feature is the utilization of Quick Read codes (QR) and our close collaboration with you. Student’s, when signing up for an account, enter their student details which organizations (like a student clubs or student societies) generally need to keep track of their members. Students will be able to conveniently sign up for these organizations using our App at home or by taking a picture of an organization specific QR code generated by our team. Cardigin built in so many useful pictures, you're going to ask why you didn't have this sooner!" data-orig-src="images/u9237-75.png?crc=3959344902" data-image-width="255" data-orig-id="u9237-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+         <img class="colelem temp_no_id temp_no_img_src" alt="Centralized Experience in a Decentralized Environment. Woah. " width="531" height="147" data-orig-src="images/u5908-85.png?crc=15611454" data-orig-id="u5908-8" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+         <div class="clip_frame colelem temp_no_id" data-sizePolicy="fluidWidthHeight" data-pintopage="page_fixedCenter" data-orig-id="u13185"><!-- image -->
+          <img class="block temp_no_id temp_no_img_src" data-orig-src="images/spotlight225x225.png?crc=321199043" alt="" data-heightwidthratio="1" data-image-width="225" data-image-height="225" data-orig-id="u13185_img" src="images/blank.gif?crc=4208392903"/>
+         </div>
+         <img class="colelem temp_no_id temp_no_img_src" alt="It's getting Crowded... It seems like everyone and everything has an App. Organizations and institutions all build an App just to say they have an App. But whatever they build, often times, is awful. Sorry to be brutally honest. That's why Cardigin exist. We're here to flip that on its head so that our clients don't end up like the other guys (don't be like the others). We built something you can use and have a reason to use. It works well and it's fun! Give us a try and you'll soon agree with us that we got the recipe just right. " data-orig-src="images/u9393-75.png?crc=4268791273" data-image-width="275" data-orig-id="u9393-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+         <img class="colelem temp_no_id temp_no_img_src" alt="First and foremost; You're a Student. We get it, money is tight. Student Organizers don't have the budget to advertise their extravagant events. We want to do what we can to help you and your students so we're offering our services to you folks for free. In addition, we'll keep in touch to continue improving our product so that Cardigin works for you and not the other way around. " data-orig-src="images/u9394-75.png?crc=3798376910" data-image-width="275" data-orig-id="u9394-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+         <img class="colelem temp_no_id temp_no_img_src" alt="Removing the Clutter and the Mess. There's beauty in simplicity and cleanliness. We're here to organize your home. Because we know from the get-go which school each one of our users attend, we are able to build a centralized experience for both the student and the organizers. When a student club promotes an event on social media, the amount of publicity is limited to the number of times their event is shared by event coordinators or club members. In addition, those shares are really annoying especially if you don't care for them. Like, why do I (a student from Example University) care if my friend from high school is organizing a donut sale at Template University? Why do I even need to know that there is a donut sale at there? So Cardigin takes this into consideration and only show users events relevant to them." data-orig-src="images/u9395-75.png?crc=437761455" data-image-width="275" data-orig-id="u9395-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="clearfix colelem temp_no_id" data-orig-id="pu5916"><!-- group -->
+      <div class="clip_frame grpelem temp_no_id" data-sizePolicy="fluidWidthHeight" data-pintopage="page_fixedLeft" data-orig-id="u5916"><!-- svg -->
+       <img class="svg svg_mar temp_no_id temp_no_img_src" data-orig-src="images/bubbly.svg?crc=4273290824" onload="this.style.height=(this.offsetWidth*225/225)+'px'" alt="" data-mu-svgfallback="images/bubbly_poster_.png?crc=125940332" data-heightwidthratio="1" data-image-width="225" data-image-height="225" data-orig-id="u5912" src="images/blank.gif?crc=4208392903"/>
+      </div>
+      <span class="clearfix grpelem placeholder" data-placeholder-for="u5926-4_content"><!-- placeholder node --></span>
+     </div>
+     <img class="colelem temp_no_id temp_no_img_src" alt="Finish as Strong as you Started. We believe that a student will succeed if they start off really strong and stay motivated to continue working hard. Cardigin will be your motivation and your personal school trainer. We'll design a plan for the students so that they can focus on studying and staying active in their community. So here's our plan for students in three steps." data-orig-src="images/u10451-125.png?crc=3984888846" data-image-width="241" data-orig-id="u10451-12" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+     <img class="colelem temp_no_id temp_no_img_src" alt="Step 1: Start Strong Let's focus on the first year students who are being introduced to college life for the first time. Remember that feeling? A little anxious, nervous but excited at the same time? Afraid of losing old pals from high school and afraid that you might not be able to make new friends in college? Well, we have the perfect ice breaker. Exclusive to those students participating in their school orientation, students will be prompted to go around their school and start taking pictures of other student QR codes. Once these pictures are taken, the two students will be consider 'friends' on Cardigin. In addition, students will earn points for every 'friend' they make during the Orientation. These points can be used to win sweet prizes such as gift cards or... gift cards (still working on it). Is it weird to add strangers like this? Not at all! We believe this is the perfect way to start meeting people and a great conversation starter!" data-orig-src="images/u10473-75.png?crc=4220785116" data-image-width="276" data-orig-id="u10473-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+     <img class="colelem temp_no_id temp_no_img_src" alt="Step 2: Don't wait to Participate Ahhh...the school year finally started and there are clubs looking to grab my attention. The club organizers are yelling out loud so that all could hear if &quot;anyone is interested in the ___________ club.&quot; I'm not certain if I am interested in that club but it really doesn't hurt to try new things. They ask me to fill in my information such as my student number, student email, my full name, and etc. But then, it dawns on me that I have to do this tedious writing over and over again every time I find a club I might find interesting. That's where Cardigin's got my back. With the app, I can simply take a picture of the club's QR code and...VOILA! I'm signed up for the club with one pain free picture! Now these clubs that I signed up for are hosting these really cool and exciting events! What's even better is that the event plans to have a QR code unique to that event I plan on attending. What this means is that I can show my friends on Cardigin that I went and did some amazing things with my new friends I met in the school club. Not only that, I earned myself some Cardigin points that goes towards my personal experience level. My chances of winning cool prizes from Cardigin goes up as I level up! Since I'm level 28 now, I know I have a better chance of winning that gift card than those who are level 1 or level 27. " data-orig-src="images/u10474-85.png?crc=413267088" data-image-width="274" data-orig-id="u10474-8" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+     <img class="colelem temp_no_id temp_no_img_src" alt="Step 3: The Graduation Before the Commencement The semester is finally over and Cardigin is now announcing the hardest working student across the country. I worked really hard and attended a lot of events so I hope the team at Cardigin recognizes it. I heard they're giving away a sweet prize for the winner." data-orig-src="images/u10475-75.png?crc=294849172" data-image-width="274" data-orig-id="u10475-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+     <div class="clearfix colelem temp_no_id" data-orig-id="pu5934"><!-- group -->
+      <div class="clip_frame grpelem temp_no_id" data-sizePolicy="fluidWidthHeight" data-pintopage="page_fixedCenter" data-orig-id="u5934"><!-- svg -->
+       <img class="svg svg_mar temp_no_id temp_no_img_src" data-orig-src="images/safeandsecure.svg?crc=4283953555" onload="this.style.height=(this.offsetWidth*188.75/188.75)+'px'" alt="" data-mu-svgfallback="images/safeandsecure_poster_.png?crc=394338046" data-heightwidthratio="1" data-image-width="189" data-image-height="189" data-orig-id="u5930" src="images/blank.gif?crc=4208392903"/>
+      </div>
+      <span class="clearfix grpelem placeholder" data-placeholder-for="u5944-8_content"><!-- placeholder node --></span>
+     </div>
+     <img class="colelem temp_no_id temp_no_img_src" alt="We totally get that everyone is concerned about privacy and their security. User concerns are completely justified and companies should take responsibility especially when their costumers trusted them with valuable information. In the wake of some public breaches in the industry, it is clear that a technology companies such as ours need to take the proper steps necessary in order to protect our users and clients. We recognize the great responsibility of keeping our company ethical and, for the benefit of the brand and our shareholders, we will take every step to honour our users’ trust. The only way for our company to be reflected in a good light is to do right. So here's what we'll do a) Establish a Code of Ethics for individuals on the Cardigin team and the company in its entirety. b) Be completely transparent with how Cardigin uses each individuals data. c) Create a feedback forum to get customer input. d) Comply with and meet the highest legal standards for all our users. e) Set in place corporate deterrences and actions against unethical behaviour in the company. Because ethics are both personally and culturally defined, differences of opinion arise as to what is ethical or unethical. However, our definition of ethics is the prioritization of our users and their communities. We vow to prioritize our users’ safety and privacy before all else and protect their communities while doing so. Another possible obstacle is the collision between what is the law and what is ethical. It would be ideal to distance ourselves from such a situation but it would be irresponsible for our company to not have a plan of action for this scenario. In these cases, we will follow the law regardless of the social norms. However, Cardigin vows to stand up for our users while maintaining order by having discussions with state representatives and by providing advocates with a platform where they are able to express their themselves. " data-orig-src="images/u10723-295.png?crc=4283825839" data-image-width="277" data-orig-id="u10723-29" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+    </div>
+    <span class="clearfix grpelem placeholder" data-placeholder-for="pu94_content"><!-- placeholder node --></span>
+    <div class="verticalspacer" data-offset-top="13474" data-content-above-spacer="13473" data-content-below-spacer="61" data-sizePolicy="fixed" data-pintopage="page_fixedLeft"></div>
+    <span class="browser_width grpelem placeholder" data-placeholder-for="u10957-bw_content"><!-- placeholder node --></span>
+   </div>
+   <div class="preload_images">
+    <img class="preload temp_no_img_src" data-orig-src="images/u3747-r.png?crc=278455054" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u3747-a.png?crc=278455054" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u3796-r.png?crc=388244965" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u3796-a.png?crc=388244965" alt="" src="images/blank.gif?crc=4208392903"/>
+   </div>
+  </div>
+  <!-- JS includes -->
+  <script type="text/javascript">
+   if (document.location.protocol != 'https:') document.write('\x3Cscript src="http://musecdn2.businesscatalyst.com/scripts/4.0/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
+</script>
+  <script type="text/javascript">
+   window.jQuery || document.write('\x3Cscript src="scripts/jquery-1.8.3.min.js?crc=209076791" type="text/javascript">\x3C/script>');
+</script>
+  <!-- Other scripts -->
+  <script type="text/javascript">
+   // Decide whether to suppress missing file error or not based on preference setting
+var suppressMissingFileError = false
+</script>
+  <script type="text/javascript">
+   window.Muse.assets.check=function(c){if(!window.Muse.assets.checked){window.Muse.assets.checked=!0;var b={},d=function(a,b){if(window.getComputedStyle){var c=window.getComputedStyle(a,null);return c&&c.getPropertyValue(b)||c&&c[b]||""}if(document.documentElement.currentStyle)return(c=a.currentStyle)&&c[b]||a.style&&a.style[b]||"";return""},a=function(a){if(a.match(/^rgb/))return a=a.replace(/\s+/g,"").match(/([\d\,]+)/gi)[0].split(","),(parseInt(a[0])<<16)+(parseInt(a[1])<<8)+parseInt(a[2]);if(a.match(/^\#/))return parseInt(a.substr(1),
+16);return 0},f=function(f){for(var g=document.getElementsByTagName("link"),j=0;j<g.length;j++)if("text/css"==g[j].type){var l=(g[j].href||"").match(/\/?css\/([\w\-]+\.css)\?crc=(\d+)/);if(!l||!l[1]||!l[2])break;b[l[1]]=l[2]}g=document.createElement("div");g.className="version";g.style.cssText="display:none; width:1px; height:1px;";document.getElementsByTagName("body")[0].appendChild(g);for(j=0;j<Muse.assets.required.length;){var l=Muse.assets.required[j],k=l.match(/([\w\-\.]+)\.(\w+)$/),i=k&&k[1]?
+k[1]:null,k=k&&k[2]?k[2]:null;switch(k.toLowerCase()){case "css":i=i.replace(/\W/gi,"_").replace(/^([^a-z])/gi,"_$1");g.className+=" "+i;i=a(d(g,"color"));k=a(d(g,"backgroundColor"));i!=0||k!=0?(Muse.assets.required.splice(j,1),"undefined"!=typeof b[l]&&(i!=b[l]>>>24||k!=(b[l]&16777215))&&Muse.assets.outOfDate.push(l)):j++;g.className="version";break;case "js":j++;break;default:throw Error("Unsupported file type: "+k);}}c?c().jquery!="1.8.3"&&Muse.assets.outOfDate.push("jquery-1.8.3.min.js"):Muse.assets.required.push("jquery-1.8.3.min.js");
+g.parentNode.removeChild(g);if(Muse.assets.outOfDate.length||Muse.assets.required.length)g="Some files on the server may be missing or incorrect. Clear browser cache and try again. If the problem persists please contact website author.",f&&Muse.assets.outOfDate.length&&(g+="\nOut of date: "+Muse.assets.outOfDate.join(",")),f&&Muse.assets.required.length&&(g+="\nMissing: "+Muse.assets.required.join(",")),suppressMissingFileError?(g+="\nUse SuppressMissingFileError key in AppPrefs.xml to show missing file error pop up.",console.log(g)):alert(g)};location&&location.search&&location.search.match&&location.search.match(/muse_debug/gi)?
+setTimeout(function(){f(!0)},5E3):f()}};
+var muse_init=function(){require.config({baseUrl:""});require(["jquery","museutils","whatinput","webpro","musewpdisclosure","jquery.watch","jquery.musemenu","jquery.scrolleffects","jquery.museresponsive"],function(c){var $ = c;$(document).ready(function(){try{
+window.Muse.assets.check($);/* body */
+Muse.Utils.transformMarkupToFixBrowserProblemsPreInit();/* body */
+Muse.Utils.prepHyperlinks(true);/* body */
+Muse.Utils.resizeHeight('.browser_width');/* resize height */
+Muse.Utils.requestAnimationFrame(function() { $('body').addClass('initialized'); });/* mark body as initialized */
+Muse.Utils.makeButtonsVisibleAfterSettingMinWidth();/* body */
+Muse.Utils.initWidget('#accordionu12944', ['#bp_infinity', '#bp_1024', '#bp_686', '#bp_685', '#bp_320'], function(elem) { return new WebPro.Widget.Accordion(elem, {canCloseAll:false,defaultIndex:0}); });/* #accordionu12944 */
+Muse.Utils.initWidget('.MenuBar', ['#bp_infinity', '#bp_1024', '#bp_686', '#bp_685', '#bp_320'], function(elem) { return $(elem).museMenu(); });/* unifiedNavBar */
+Muse.Utils.initWidget('#accordionu1863', ['#bp_685', '#bp_320'], function(elem) { return new WebPro.Widget.Accordion(elem, {canCloseAll:true,defaultIndex:0}); });/* #accordionu1863 */
+Muse.Utils.fullPage('#page');/* 100% height page */
+$('#bp_infinity').one('muse_this_bp_activate', function(){
+$('#u12188').registerOpacityScrollEffect([{"in":[-Infinity,469.95],"opacity":100,"fade":50},{"in":[469.95,469.95],"opacity":0},{"in":[469.95,Infinity],"opacity":0,"fade":50}], $(this)); /* scroll effect */
+$('#u5063-6').registerOpacityScrollEffect([{"in":[-Infinity,1263.95],"opacity":0,"fade":680},{"in":[1263.95,1263.95],"opacity":100},{"in":[1263.95,Infinity],"opacity":100,"fade":0}], $(this)); /* scroll effect */
+$('#u5047').registerOpacityScrollEffect([{"in":[-Infinity,1283.95],"opacity":0,"fade":650},{"in":[1283.95,1283.95],"opacity":60},{"in":[1283.95,Infinity],"opacity":60,"fade":0}], $(this)); /* scroll effect */
+$('#u5071').registerOpacityScrollEffect([{"in":[-Infinity,1263.95],"opacity":0,"fade":680},{"in":[1263.95,1263.95],"opacity":100},{"in":[1263.95,Infinity],"opacity":100,"fade":0}], $(this)); /* scroll effect */
+$('#u5085').registerOpacityScrollEffect([{"in":[-Infinity,1263.95],"opacity":0,"fade":680},{"in":[1263.95,1263.95],"opacity":100},{"in":[1263.95,Infinity],"opacity":100,"fade":0}], $(this)); /* scroll effect */
+$('#u7054-8').registerOpacityScrollEffect([{"in":[-Infinity,1283.95],"opacity":0,"fade":300},{"in":[1283.95,1283.95],"opacity":100},{"in":[1283.95,Infinity],"opacity":100,"fade":0}], $(this)); /* scroll effect */
+$('#u7058-10').registerOpacityScrollEffect([{"in":[-Infinity,1303.95],"opacity":0,"fade":270},{"in":[1303.95,1303.95],"opacity":100},{"in":[1303.95,Infinity],"opacity":100,"fade":0}], $(this)); /* scroll effect */
+$('#u7064-7').registerOpacityScrollEffect([{"in":[-Infinity,1333.95],"opacity":0,"fade":250},{"in":[1333.95,1333.95],"opacity":100},{"in":[1333.95,Infinity],"opacity":100,"fade":0}], $(this)); /* scroll effect */
+$('#u5604-6').registerOpacityScrollEffect([{"in":[-Infinity,2683.95],"opacity":0,"fade":130},{"in":[2683.95,2683.95],"opacity":100},{"in":[2683.95,Infinity],"opacity":100,"fade":0}], $(this)); /* scroll effect */
+$('#u9235-7').registerOpacityScrollEffect([{"in":[-Infinity,5309.72],"opacity":0,"fade":300},{"in":[5309.72,5309.72],"opacity":100},{"in":[5309.72,Infinity],"opacity":100,"fade":0}], $(this)); /* scroll effect */
+$('#u9236-7').registerOpacityScrollEffect([{"in":[-Infinity,5329.72],"opacity":0,"fade":270},{"in":[5329.72,5329.72],"opacity":100},{"in":[5329.72,Infinity],"opacity":100,"fade":0}], $(this)); /* scroll effect */
+$('#u9237-7').registerOpacityScrollEffect([{"in":[-Infinity,5359.73],"opacity":0,"fade":250},{"in":[5359.73,5359.73],"opacity":100},{"in":[5359.73,Infinity],"opacity":100,"fade":0}], $(this)); /* scroll effect */
+$('#u5908-8').registerOpacityScrollEffect([{"in":[-Infinity,6133.95],"opacity":0,"fade":250},{"in":[6133.95,6133.95],"opacity":100},{"in":[6133.95,Infinity],"opacity":100,"fade":0}], $(this)); /* scroll effect */
+$('#u9393-7').registerOpacityScrollEffect([{"in":[-Infinity,6758.53],"opacity":0,"fade":300},{"in":[6758.53,6758.53],"opacity":100},{"in":[6758.53,Infinity],"opacity":100,"fade":0}], $(this)); /* scroll effect */
+$('#u9394-7').registerOpacityScrollEffect([{"in":[-Infinity,6778.53],"opacity":0,"fade":270},{"in":[6778.53,6778.53],"opacity":100},{"in":[6778.53,Infinity],"opacity":100,"fade":0}], $(this)); /* scroll effect */
+$('#u9395-7').registerOpacityScrollEffect([{"in":[-Infinity,6808.53],"opacity":0,"fade":250},{"in":[6808.53,6808.53],"opacity":100},{"in":[6808.53,Infinity],"opacity":100,"fade":0}], $(this)); /* scroll effect */
+$('#u5665').registerOpacityScrollEffect([{"in":[-Infinity,3933.95],"opacity":0,"fade":325},{"in":[3933.95,3933.95],"opacity":100},{"in":[3933.95,Infinity],"opacity":100,"fade":0}], $(this)); /* scroll effect */
+$('#u5671').registerOpacityScrollEffect([{"in":[-Infinity,4033.95],"opacity":0,"fade":175},{"in":[4033.95,4033.95],"opacity":100},{"in":[4033.95,Infinity],"opacity":100,"fade":0}], $(this)); /* scroll effect */
+$('#u5677').registerOpacityScrollEffect([{"in":[-Infinity,4133.95],"opacity":0,"fade":50},{"in":[4133.95,4133.95],"opacity":100},{"in":[4133.95,Infinity],"opacity":100,"fade":0}], $(this)); /* scroll effect */
+$('#u5594').registerOpacityScrollEffect([{"in":[-Infinity,2833.95],"opacity":0,"fade":200},{"in":[2833.95,2833.95],"opacity":100},{"in":[2833.95,Infinity],"opacity":100,"fade":0}], $(this)); /* scroll effect */
+$('#u8602-7').registerOpacityScrollEffect([{"in":[-Infinity,3441.27],"opacity":0,"fade":300},{"in":[3441.27,3441.27],"opacity":100},{"in":[3441.27,Infinity],"opacity":100,"fade":0}], $(this)); /* scroll effect */
+$('#u8603-8').registerOpacityScrollEffect([{"in":[-Infinity,3461.27],"opacity":0,"fade":270},{"in":[3461.27,3461.27],"opacity":100},{"in":[3461.27,Infinity],"opacity":100,"fade":0}], $(this)); /* scroll effect */
+$('#u8604-7').registerOpacityScrollEffect([{"in":[-Infinity,3491.27],"opacity":0,"fade":250},{"in":[3491.27,3491.27],"opacity":100},{"in":[3491.27,Infinity],"opacity":100,"fade":0}], $(this)); /* scroll effect */
+$('#u5916').registerOpacityScrollEffect([{"in":[-Infinity,7683.95],"opacity":0,"fade":150},{"in":[7683.95,7683.95],"opacity":100},{"in":[7683.95,Infinity],"opacity":100,"fade":0}], $(this)); /* scroll effect */
+$('#u5926-4').registerOpacityScrollEffect([{"in":[-Infinity,7383.95],"opacity":0,"fade":150},{"in":[7383.95,7383.95],"opacity":100},{"in":[7383.95,Infinity],"opacity":100,"fade":0}], $(this)); /* scroll effect */
+$('#u10451-12').registerOpacityScrollEffect([{"in":[-Infinity,7583.95],"opacity":0,"fade":250},{"in":[7583.95,7583.95],"opacity":100},{"in":[7583.95,Infinity],"opacity":100,"fade":0}], $(this)); /* scroll effect */
+$('#u10473-7').registerOpacityScrollEffect([{"in":[-Infinity,8163.17],"opacity":0,"fade":300},{"in":[8163.17,8163.17],"opacity":100},{"in":[8163.17,Infinity],"opacity":100,"fade":0}], $(this)); /* scroll effect */
+$('#u10474-8').registerOpacityScrollEffect([{"in":[-Infinity,8389.08],"opacity":0,"fade":270},{"in":[8389.08,8389.08],"opacity":100},{"in":[8389.08,Infinity],"opacity":100,"fade":0}], $(this)); /* scroll effect */
+$('#u10475-7').registerOpacityScrollEffect([{"in":[-Infinity,8433.95],"opacity":0,"fade":250},{"in":[8433.95,8433.95],"opacity":100},{"in":[8433.95,Infinity],"opacity":100,"fade":0}], $(this)); /* scroll effect */
+$('#u5934').registerOpacityScrollEffect([{"in":[-Infinity,8733.95],"opacity":0,"fade":150},{"in":[8733.95,8733.95],"opacity":100},{"in":[8733.95,Infinity],"opacity":100,"fade":0}], $(this)); /* scroll effect */
+$('#u5944-8').registerOpacityScrollEffect([{"in":[-Infinity,8683.95],"opacity":0,"fade":200},{"in":[8683.95,8683.95],"opacity":100},{"in":[8683.95,Infinity],"opacity":100,"fade":0}], $(this)); /* scroll effect */
+$('#u10723-29').registerOpacityScrollEffect([{"in":[-Infinity,9686.25],"opacity":0,"fade":270},{"in":[9686.25,9686.25],"opacity":100},{"in":[9686.25,Infinity],"opacity":100,"fade":0}], $(this)); /* scroll effect */
+});/* scroll effects for one breakpoint */
+$( '.breakpoint' ).registerBreakpoint();/* Register breakpoints */
+Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
+}catch(b){if(b&&"function"==typeof b.notify?b.notify():Muse.Assert.fail("Error calling selector function: "+b),false)throw b;}})})};
+
+</script>
+  <!-- RequireJS script -->
+  <script src="scripts/require.js?crc=7928878" type="text/javascript" async data-main="scripts/museconfig.js?crc=310584261" onload="if (requirejs) requirejs.onError = function(requireType, requireModule) { if (requireType && requireType.toString && requireType.toString().indexOf && 0 <= requireType.toString().indexOf('#scripterror')) window.Muse.assets.check(); }" onerror="window.Muse.assets.check();"></script>
+
+  <!--HTML Widget code-->
+
+
+<script src="scripts/jquery.museresponsive.js"></script>
+<script type="text/javascript">
+    $( '.breakpoint' ).registerBreakpoint();/* Register breakpoints */
+</script>
+<script>
+    function progressBar( elem, all_images, loaded_images ){
+        var ratio = ( loaded_images / all_images );
+        elem.animate(ratio, {
+            duration: 4000
+        });
+    }
+
+    function progressPercentage( all_images, loaded_images ) {
+        return Math.round(( loaded_images / all_images ) * 100);
+    }
+</script>
+
+
+                        <script>
+
+                            $('.musegain_absolute_preloader').css('visibility','visible');
+                            $('.musegain_absolute_preloader img.temp_no_img_src').each(function(){
+                                $(this).attr('src',$(this).attr('data-orig-src'));
+                            });
+
+                            if($('#u12947 .musegain_preloader_container').length){
+                                var bar = new ProgressBar.Line('#u12947 .musegain_preloader_container', {
+                                    color: '#FCB03C',
+                                    strokeWidth: 1,
+                                    trailColor: '#EEEEEE',
+                                    trailWidth: 1,
+                                    from: {color: '#FCB03C'},
+                                    to: {color: '#FCB03C'},
+                                    easing: 'easeInOut',
+                                    step: (state, bar) => {
+                                        bar.path.setAttribute('stroke', state.color);
+                                        if($('.musegain_preloader_percentage').length){
+                                            $('.musegain_preloader_percentage').html( Math.round(bar.value() * 100) + '%' );
+                                        }
+                                      }
+                                });
+                            }
+
+                            $('body').addClass('initialized');
+
+                            var imgLoad = imagesLoaded( document.querySelector('body'), { background: 'div' });
+                            var all_images = imgLoad.images.length;
+
+                            var overlay = $('<div class="musegain_preloader_overlay"> </div>');
+                            overlay.appendTo(document.body);
+
+                            imgLoad.on( 'progress', function( instance, image ) {
+                                var progress_percentage = progressPercentage( all_images, instance.progressedCount );
+
+                                if($('#u12947 .musegain_preloader_container').length){
+                                    progressBar(bar, all_images, instance.progressedCount);
+                                }
+                            });
+
+                            imgLoad.on( 'done', function( instance ) {
+
+                                setTimeout( function(){
+                                    $('.musegain_preloader_overlay').fadeOut();
+                                    $('.musegain_absolute_preloader').fadeOut();
+                                    $('body').css('overflow','auto');
+                                }, 4000 );
+
+                            });
+
+                        </script>
+
+<script>
+$('#img1').attr("href", "#");
+$('#img2').attr("href", "#");
+$('#img3').attr("href", "#");
+$('#img4').attr("href", "#");
+$('#img5').attr("href", "#");
+$('#img6').attr("href", "#");
+$('#img7').attr("href", "#");
+$( "a" ).remove(" ");
+$( "a" ).remove(" ");
+$( "a" ).remove(" ");
+$( "a" ).remove(" ");
+</script>
+
+
+ <script type="text/javascript">
+ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('(k(e){"2u 2v";e.1r.1f=k(t){k s(){i={O:e(n),L:e(n).C("G").14,1j:e(n).N(),1n:e(n).M(),x:1u,1k:1u,F:[],I:[],15:0,10:D,17:0,V:r.1o,2t:1u,11:"R",1m:0,1l:0,1x:A};i.O.C("G").1F(r.1d)}k o(e){2s(i.1D);4(!e&&r.K!==0){i.1D=2q(k(){4(r.K>0){b("R")}w{b("12")}},B.T(r.K))}}k u(t){4(r.21===D){t();E}5 n=i.O.C("G"),s=0,o=n.14;n.16(k(){e(j).1s("1E",k(){s+=1;4(s===o){t();E}});e(j).1z("1A",e(j).1z("1A"));4(j.2y){e(j).2B("1E")}})}k a(){i.O.C("G").16(k(){4(e(j).9("19")==1J||r.1g>0){e(j).9("19",e(j).N())}4(e(j).9("18")==1J||r.1i>0){e(j).9("18",e(j).M())}})}k f(){4(r.1g&&r.1i){i.O.C("G").16(k(){e(j).N(r.1g);e(j).M(r.1i)})}}k l(){5 e=i.O.C("G:1L");i.I[0]={1b:0,1c:0,q:1};5 t=r.1O;5 n=r.1S;13(5 s=1;s<=r.J+2;s++){4(s>1){t*=r.1P;n*=r.1R}i.I[s]={1b:i.I[s-1].1b+n,1c:i.I[s-1].1c+t,q:i.I[s-1].q*r.1Q}}4(r.23){i.I[r.J+1].q=0}w{i.I[r.J+1]={1b:0,1c:0,q:0}}}k c(){i.F=i.O.C("G");13(5 t=0;t<i.L;t++){i.F[t]=e(i.F[t])}4(r.P===0){4(r.H==="W"){r.P=i.1n/2}w{r.P=i.1j/2}}i.O.Z("1I","2z").C("G").16(k(){5 t,n;4(r.H==="W"){t=i.1j/2-e(j).9("19")/2;n=r.P-e(j).9("18")/2}w{t=r.P-e(j).9("19")/2;n=i.1n/2-e(j).9("18")/2}e(j).Z({X:t,U:n,2p:"2o",1I:"2f","z-1p":0,q:0}).9({U:n,X:t,1t:0,Y:0,1e:0,q:0}).2b()})}k h(){r.S=r.S===0?B.29(i.L/2):r.S;i.1l=B.2g((i.L-1)/2);i.1m=B.2l((i.L-1)/2);i.15=1;d(i.F[r.S-1],0);i.F[r.S-1].Z("q",1);5 e=r.S-1;13(5 t=1;t<=i.1l;t++){e<i.L-1?e+=1:e=0;i.F[e].Z("q",1);d(i.F[e],t)}5 e=r.S-1;13(5 t=-1;t>=i.1m*-1;t--){e>0?e-=1:e=i.L-1;i.F[e].Z("q",1);d(i.F[e],t)}}k p(e,t){5 n=B.T(t);4(n<r.J+1){5 s=i.I[n]}w{5 s=i.I[r.J+1]}5 o=B.2k(r.27,n);5 u=o*e.9("19");5 a=o*e.9("18");5 f=B.T(e.N()-u);5 l=B.T(e.M()-a);5 c=s.1c;5 h=s.1b;4(t<0){h*=-1}4(r.H=="W"){5 p=i.1j/2;5 d=p+h-u/2;5 v=r.P-c-a/2}w{5 p=i.1n/2;5 d=r.P-c-u/2;5 v=p+h-a/2}5 m;4(t===0){m=1}w{m=s.q}5 g=r.J+2-n;e.9("N",u);e.9("M",a);e.9("U",v);e.9("X",d);e.9("1t",e.9("Y"));e.9("1e",g);e.9("q",m)}k d(e,t){4(B.T(t)<=r.J+1){p(e,t);i.17++;e.Z("z-1p",e.9().1e).2m({X:e.9().X,N:e.9().N,M:e.9().M,U:e.9().U,q:e.9().q},i.V,r.1W,k(){v(e,t)})}w{e.9("Y",t);4(e.9("1t")===0){e.Z({X:e.9().X,N:e.9().N,M:e.9().M,U:e.9().U,q:e.9().q,"z-1p":e.9().1e})}}}k v(e,t){i.17--;e.9("Y",t);4(t===0){i.x=e}4(i.17===0){i.15-=1;i.10=D;4(i.15>0){m(0)}w{i.V=r.1o;i.x.2A(r.1d);4(i.1x===D){r.1Y(i.x);r.20(i.1k)}i.1x=D;o()}}}k m(t){4(i.10===D){i.x.1F(r.1d);i.10=A;i.17=0;i.15+=t;4(r.1X===A){4(t>1){i.V=r.1o/t}i.V=i.V<1y?1y:i.V}13(5 n=0;n<i.L;n++){5 s=e(i.F[n]);5 o=s.9("Y");5 u;4(i.11=="R"){u=o-1}w{u=o+1}5 a=u>0?i.1l:i.1m;4(B.T(u)>a){u=o*-1;4(i.L%2==0){u+=1}}d(s,u)}}}k g(){5 e=i.x.26();4(e.14<=0){e=i.x.1K().1H().1L()}E e}k y(){5 e=i.x.1T();4(e.14<=0){e=i.x.1K().1H().2n()}E e}k b(e){4(i.10===D){i.1k=i.x;r.1q(i.x);4(e=="12"){r.1h(y());i.11="12"}w 4(e=="R"){r.1h(g());i.11="R"}}m(1)}4(j.14>1){j.16(k(){e(j).1f(t)});E j}5 n=j;5 r={};5 i={};e(j).C("G").1s("1M",k(){5 t=e(j).9().Y;4(r.22==D){E}4(B.T(t)>=r.J+1){E}4(i.10){E}i.1k=i.x;o(A);r.K=0;5 n=B.T(t);4(t==0){r.1Z(e(j))}w{r.1q(i.x);r.1h(e(j));4(t<0){i.11="12";m(n)}w 4(t>0){i.11="R";m(n)}}});e(j).C("a").1s("1M",k(t){5 n=e(j).C("G").9("Y")==0;4(r.1v===1||r.1v===2&&!n){t.28();E D}});e(2D).2x(k(e){4(r.24){4(e.Q===1B&&r.H=="W"||e.Q===1G&&r.H=="1w"){o(A);r.K=0;b("12")}w 4(e.Q===1C&&r.H=="W"||e.Q===1N&&r.H=="1w"){o(A);r.K=0;b("R")}4(r.25&&(r.H=="W"&&(e.Q===1B||e.Q===1C)||r.H=="1w"&&(e.Q===1G||e.Q===1N))){e.28();E D}}});j.1U=k(t){4(2r t==="2e"){5 n=t}w{5 n={}}r=e.2w({},e.1r.1f.1V,t);s();i.O.C("G").2c();f();u(k(){a();l();c();h()})};j.26=k(){o(A);r.K=0;b("R")};j.1T=k(){o(A);r.K=0;b("12")};j.1U(t);E j};e.1r.1f.1V={S:1,1S:2C,1R:.6,1O:0,1P:1,27:.7,1Q:.8,P:0,J:3,1o:2a,1W:"2h",1X:A,23:D,1v:2,K:0,H:"W",1d:"2i-2j",24:D,25:A,22:A,21:A,1g:0,1i:0,1h:e.1a,1Y:e.1a,1Z:e.1a,1q:e.1a,20:e.1a}})(2d)',62,164,'||||if|var||||data||||||||||this|function||||||opacity||||||else|currentCenterItem|||true|Math|find|false|return|items|img|orientation|calculations|flankingItems|autoPlay|totalItems|height|width|itemsContainer|horizon|which|forward|startingItem|abs|top|currentSpeed|horizontal|left|currentPosition|css|currentlyMoving|currentDirection|backward|for|length|carouselRotationsLeft|each|itemsAnimating|original_height|original_width|noop|distance|offset|activeClassName|depth|waterwheelCarousel|forcedImageWidth|movingToCenter|forcedImageHeight|containerWidth|previousCenterItem|rightItemsCount|leftItemsCount|containerHeight|speed|index|movingFromCenter|fn|bind|oldPosition|null|linkHandling|vertical|performingSetup|100|attr|src|37|39|autoPlayTimer|load|removeClass|38|children|position|undefined|parent|first|click|40|horizonOffset|horizonOffsetMultiplier|opacityMultiplier|separationMultiplier|separation|prev|reload|defaults|animationEasing|quickerForFurther|movedToCenter|clickedCenter|movedFromCenter|preloadImages|imageNav|edgeFadeEnabled|keyboardNav|keyboardNavOverride|next|sizeMultiplier|preventDefault|round|300|show|hide|jQuery|object|absolute|ceil|linear|carousel|center|pow|floor|animate|last|visible|visibility|setTimeout|typeof|clearTimeout|intervalTimer|use|strict|extend|keydown|complete|relative|addClass|trigger|175|document'.split('|'),0,{}))
+ </script>
+  <script type="text/javascript">
+  eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('d.g["J"]=d.g["C"];d.H(d.g,{D:"y",C:9(e,t,n,r,i){6 d.g[d.g.D](e,t,n,r,i)},U:9(e,t,n,r,i){6 r*(t/=i)*t+n},y:9(e,t,n,r,i){6-r*(t/=i)*(t-2)+n},17:9(e,t,n,r,i){a((t/=i/2)<1)6 r/2*t*t+n;6-r/2*(--t*(t-2)-1)+n},12:9(e,t,n,r,i){6 r*(t/=i)*t*t+n},W:9(e,t,n,r,i){6 r*((t=t/i-1)*t*t+1)+n},X:9(e,t,n,r,i){a((t/=i/2)<1)6 r/2*t*t*t+n;6 r/2*((t-=2)*t*t+2)+n},18:9(e,t,n,r,i){6 r*(t/=i)*t*t*t+n},15:9(e,t,n,r,i){6-r*((t=t/i-1)*t*t*t-1)+n},1b:9(e,t,n,r,i){a((t/=i/2)<1)6 r/2*t*t*t*t+n;6-r/2*((t-=2)*t*t*t-2)+n},Q:9(e,t,n,r,i){6 r*(t/=i)*t*t*t*t+n},I:9(e,t,n,r,i){6 r*((t=t/i-1)*t*t*t*t+1)+n},13:9(e,t,n,r,i){a((t/=i/2)<1)6 r/2*t*t*t*t*t+n;6 r/2*((t-=2)*t*t*t*t+2)+n},N:9(e,t,n,r,i){6-r*8.B(t/i*(8.c/2))+r+n},M:9(e,t,n,r,i){6 r*8.l(t/i*(8.c/2))+n},L:9(e,t,n,r,i){6-r/2*(8.B(8.c*t/i)-1)+n},O:9(e,t,n,r,i){6 t==0?n:r*8.f(2,10*(t/i-1))+n},P:9(e,t,n,r,i){6 t==i?n+r:r*(-8.f(2,-10*t/i)+1)+n},S:9(e,t,n,r,i){a(t==0)6 n;a(t==i)6 n+r;a((t/=i/2)<1)6 r/2*8.f(2,10*(t-1))+n;6 r/2*(-8.f(2,-10*--t)+2)+n},R:9(e,t,n,r,i){6-r*(8.m(1-(t/=i)*t)-1)+n},K:9(e,t,n,r,i){6 r*8.m(1-(t=t/i-1)*t)+n},T:9(e,t,n,r,i){a((t/=i/2)<1)6-r/2*(8.m(1-t*t)-1)+n;6 r/2*(8.m(1-(t-=2)*t)+1)+n},F:9(e,t,n,r,i){b s=1.j;b o=0;b u=r;a(t==0)6 n;a((t/=i)==1)6 n+r;a(!o)o=i*.3;a(u<8.v(r)){u=r;b s=o/4}k b s=o/(2*8.c)*8.q(r/u);6-(u*8.f(2,10*(t-=1))*8.l((t*i-s)*2*8.c/o))+n},E:9(e,t,n,r,i){b s=1.j;b o=0;b u=r;a(t==0)6 n;a((t/=i)==1)6 n+r;a(!o)o=i*.3;a(u<8.v(r)){u=r;b s=o/4}k b s=o/(2*8.c)*8.q(r/u);6 u*8.f(2,-10*t)*8.l((t*i-s)*2*8.c/o)+r+n},G:9(e,t,n,r,i){b s=1.j;b o=0;b u=r;a(t==0)6 n;a((t/=i/2)==2)6 n+r;a(!o)o=i*.3*1.5;a(u<8.v(r)){u=r;b s=o/4}k b s=o/(2*8.c)*8.q(r/u);a(t<1)6-.5*u*8.f(2,10*(t-=1))*8.l((t*i-s)*2*8.c/o)+n;6 u*8.f(2,-10*(t-=1))*8.l((t*i-s)*2*8.c/o)*.5+r+n},1a:9(e,t,n,r,i,s){a(s==w)s=1.j;6 r*(t/=i)*t*((s+1)*t-s)+n},19:9(e,t,n,r,i,s){a(s==w)s=1.j;6 r*((t=t/i-1)*t*((s+1)*t+s)+1)+n},14:9(e,t,n,r,i,s){a(s==w)s=1.j;a((t/=i/2)<1)6 r/2*t*t*(((s*=1.z)+1)*t-s)+n;6 r/2*((t-=2)*t*(((s*=1.z)+1)*t+s)+2)+n},A:9(e,t,n,r,i){6 r-d.g.x(e,i-t,0,r,i)+n},x:9(e,t,n,r,i){a((t/=i)<1/2.h){6 r*7.p*t*t+n}k a(t<2/2.h){6 r*(7.p*(t-=1.5/2.h)*t+.h)+n}k a(t<2.5/2.h){6 r*(7.p*(t-=2.V/2.h)*t+.Y)+n}k{6 r*(7.p*(t-=2.16/2.h)*t+.11)+n}},Z:9(e,t,n,r,i){a(t<i/2)6 d.g.A(e,t*2,0,r,i)*.5+n;6 d.g.x(e,t*2-i,0,r,i)*.5+r*.5+n}})',62,74,'||||||return||Math|function|if|var|PI|jQuery||pow|easing|75||70158|else|sin|sqrt|||5625|asin|||||abs|undefined|easeOutBounce|easeOutQuad|525|easeInBounce|cos|swing|def|easeOutElastic|easeInElastic|easeInOutElastic|extend|easeOutQuint|jswing|easeOutCirc|easeInOutSine|easeOutSine|easeInSine|easeInExpo|easeOutExpo|easeInQuint|easeInCirc|easeInOutExpo|easeInOutCirc|easeInQuad|25|easeOutCubic|easeInOutCubic|9375|easeInOutBounce||984375|easeInCubic|easeInOutQuint|easeInOutBack|easeOutQuart|625|easeInOutQuad|easeInQuart|easeOutBack|easeInBack|easeInOutQuart'.split('|'),0,{}))
+</script>
+<script type="text/javascript">
+      $(document).ready(function () {
+        var carousel = $("#carousel").waterwheelCarousel({
+          flankingItems: 3,
+          autoPlay: 0,
+          forcedImageWidth: 450,
+          forcedImageHeight: 315,
+          separation: 300,
+          orientation:'horizontal',
+          linkHandling: 2,
+
+          movingToCenter: function ($item) {
+            $('#callback-output').prepend('movingToCenter: ' + $item.attr('id') + '<br/>');
+          },
+          movedToCenter: function ($item) {
+            $('#callback-output').prepend('movedToCenter: ' + $item.attr('id') + '<br/>');
+          },
+          movingFromCenter: function ($item) {
+            $('#callback-output').prepend('movingFromCenter: ' + $item.attr('id') + '<br/>');
+          },
+          movedFromCenter: function ($item) {
+            $('#callback-output').prepend('movedFromCenter: ' + $item.attr('id') + '<br/>');
+          },
+          clickedCenter: function ($item) {
+            $('#callback-output').prepend('clickedCenter: ' + $item.attr('id') + '<br/>');
+          }
+        });
+
+        $('.carousel-previous').bind('click', function () {
+          carousel.prev();
+          return false
+        });
+
+        $('.carousel-next').bind('click', function () {
+          carousel.next();
+          return false;
+        });
+
+        $('#reload').bind('click', function () {
+          newOptions = eval("(" + $('#newoptions').val() + ")");
+          carousel.reload(newOptions);
+          return false;
+        });
+
+      });
+    </script>
+
+    <p>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 720" class="undefined" width="350" height="350"
+          style="
+          width: 50%;
+          position: inherit;
+          margin-left: 25%;
+          margin-top: 10%;>
+
+         <style type="text/css" class="undefined">
+         .st0{fill:#FFFFFF;}
+         </style>
+    </p>
+
+   </body>
+</html>
